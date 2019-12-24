@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23881e7d-7463-4e7c-b156-eae45e870130" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/Core/SearchManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/DatabaseManager.java" afterDir="false" />
-=======
+
+
+      
+
       <change afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Core/Donation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Core/Donor.java" afterDir="false" />
@@ -15,7 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/Donation_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Donation_System.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
->>>>>>> 620d2dc823a426e209e65ef3a663476d59f69046
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
