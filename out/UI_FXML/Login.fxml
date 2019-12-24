@@ -57,7 +57,7 @@
                                                 <Font size="24.0" />
                                              </font>
                                           </Label>
-                                          <JFXTextField layoutX="276.0" layoutY="28.0" prefHeight="31.0" prefWidth="295.0" />
+                                          <JFXTextField id="UserName" fx:id="userName" layoutX="276.0" layoutY="28.0" prefHeight="31.0" prefWidth="295.0" />
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -75,7 +75,7 @@
                                     <Font size="24.0" />
                                  </font>
                               </Label>
-                              <JFXPasswordField layoutX="275.0" layoutY="28.0" prefHeight="31.0" prefWidth="309.0" />
+                              <JFXPasswordField id="password" fx:id="passWord" layoutX="275.0" layoutY="28.0" prefHeight="31.0" prefWidth="309.0" />
                            </children>
                         </AnchorPane>
                      </children>

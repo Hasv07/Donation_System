@@ -12,6 +12,13 @@ public abstract class User {
     private String address;
     private String phoneNumber;
 
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
     public ArrayList executeSearch(SearchManager search){
 
