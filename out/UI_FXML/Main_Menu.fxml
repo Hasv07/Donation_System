@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI_FXML.Main_Controller">
+   <tabs>
+      <Tab text="Your Profile">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" prefHeight="36.0" prefWidth="119.0" text="Hi,">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="61.0" prefHeight="38.0" prefWidth="225.0" text="Account Information:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="126.0" prefHeight="51.0" prefWidth="125.0" text="User Name :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="177.0" layoutY="136.0" prefHeight="31.0" prefWidth="272.0" />
+                  <JFXButton layoutX="506.0" layoutY="136.0" prefHeight="45.0" prefWidth="122.0" text="Edit">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@Resourses/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="513.0" layoutY="226.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@Resourses/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="39.0" layoutY="216.0" prefHeight="51.0" prefWidth="115.0" text="Password :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="515.0" layoutY="311.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@Resourses/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="39.0" layoutY="305.0" prefHeight="51.0" prefWidth="115.0" text="E-Mail :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField layoutX="174.0" layoutY="226.0" prefHeight="31.0" prefWidth="276.0" />
+                  <JFXTextField layoutX="176.0" layoutY="315.0" prefHeight="31.0" prefWidth="272.0" />
+                  <JFXButton layoutX="519.0" layoutY="389.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@Resourses/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField layoutX="183.0" layoutY="396.0" prefHeight="31.0" prefWidth="265.0" />
+                  <Label layoutX="32.0" layoutY="386.0" prefHeight="51.0" prefWidth="153.0" text="Phone Number :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="521.0" layoutY="475.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@Resourses/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="39.0" layoutY="462.0" prefHeight="51.0" prefWidth="115.0" text="Address :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="180.0" layoutY="472.0" prefHeight="31.0" prefWidth="272.0" />
+               </children></AnchorPane>
+        </content>
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@Resourses/Untitled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Tab>
+      <Tab text="Donation History">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@Resourses/4.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <content>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="94.0" text="ID" />
+                <TableColumn prefWidth="209.0" text="Donation Type" />
+                  <TableColumn prefWidth="189.0" text="Charity" />
+                  <TableColumn prefWidth="175.0" text="Date" />
+                  <TableColumn minWidth="0.0" prefWidth="163.0" text="Amount" />
+              </columns>
+            </TableView>
+         </content>
+      </Tab>
+      <Tab fx:id="Donate_tab" text="Donate">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@Resourses/2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXComboBox layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
+                  <JFXButton layoutX="501.0" layoutY="469.0" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="453.0" layoutY="231.0" prefHeight="36.0" prefWidth="123.0" text="Select Charity:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="471.0" layoutY="14.0" prefHeight="35.0" prefWidth="194.0" text="Clothes Donation" textFill="#0c546b">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="453.0" layoutY="316.0" prefHeight="30.0" prefWidth="123.0" text="Pick-up Time:">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <JFXComboBox layoutX="70.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
+                  <Label layoutX="70.0" layoutY="231.0" prefHeight="36.0" prefWidth="111.0" text="Select Charity:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="Money_Donation" layoutX="115.0" layoutY="389.0" onMouseClicked="#Money_Donation_pressed" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="80.0" layoutY="14.0" prefHeight="35.0" prefWidth="185.0" text="Money Donation" textFill="#0c546b">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="414.0" prefHeight="31.0" prefWidth="78.0" text="Amount:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker layoutX="447.0" layoutY="350.0" prefHeight="31.0" prefWidth="230.0" />
+                  <JFXTextField layoutX="533.0" layoutY="414.0" prefHeight="31.0" prefWidth="144.0" />
+                  <JFXTextField layoutX="159.0" layoutY="335.0" prefHeight="31.0" prefWidth="129.0" />
+                  <Label layoutX="79.0" layoutY="335.0" prefHeight="31.0" prefWidth="72.0" text="Amount:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView layoutX="91.0" layoutY="60.0">
+                     <image>
+                        <Image url="@Resourses/money.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="500.0" layoutY="49.0">
+                     <image>
+                        <Image url="@../../Resourses/Clothes.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Add Charity">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="317.0" layoutY="38.0" prefHeight="36.0" prefWidth="148.0" text="Charity Form">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label layoutX="29.0" layoutY="137.0" prefHeight="32.0" prefWidth="135.0" text="Name :">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <JFXTextField layoutX="256.0" layoutY="138.0" prefHeight="31.0" prefWidth="249.0" />
+                  <Label layoutX="29.0" layoutY="202.0" prefHeight="32.0" prefWidth="216.0" text="International License :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="253.0" layoutY="203.0" prefHeight="31.0" prefWidth="255.0" />
+                  <JFXTextArea layoutX="29.0" layoutY="428.0" prefHeight="98.0" prefWidth="485.0" />
+                  <JFXComboBox layoutX="189.0" layoutY="273.0" prefHeight="31.0" prefWidth="189.0" />
+                  <Label layoutX="29.0" layoutY="273.0" prefHeight="32.0" prefWidth="103.0" text="Category :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="331.0" prefHeight="32.0" prefWidth="135.0" text="E-mail :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="118.0" layoutY="332.0" prefHeight="31.0" prefWidth="255.0" />
+                  <Label layoutX="29.0" layoutY="396.0" prefHeight="32.0" prefWidth="135.0" text="Description :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="416.0" layoutY="281.0" prefHeight="32.0" prefWidth="150.0" text="Phone Number :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="416.0" layoutY="341.0" prefHeight="32.0" prefWidth="150.0" text="Website :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="577.0" layoutY="282.0" prefHeight="31.0" prefWidth="238.0" />
+                  <JFXTextField layoutX="508.0" layoutY="332.0" prefHeight="31.0" prefWidth="309.0" />
+                  <JFXButton layoutX="630.0" layoutY="448.0" prefHeight="54.0" prefWidth="174.0" text="Submit">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="43.0">
+                           <image>
+                              <Image url="@Resourses/submit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@Resourses/Charity.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Tab>
+   </tabs>
+</JFXTabPane>
