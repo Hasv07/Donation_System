@@ -21,6 +21,8 @@ public class Payment_Controller {
     @FXML
 
     private AnchorPane Pay_scene;
+    @FXML
+    private JFXButton Back;
 
 
 
@@ -61,7 +63,10 @@ public class Payment_Controller {
         }
 
     }
-
+    public void Back_pressed()
+    {
+        Main_Controller.flag=true;
+    }
 
 
 }

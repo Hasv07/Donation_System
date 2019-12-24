@@ -161,7 +161,7 @@
             </ImageView>
          </graphic>
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane fx:id="Donate_Pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <JFXComboBox layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
                   <JFXButton layoutX="501.0" layoutY="469.0" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
