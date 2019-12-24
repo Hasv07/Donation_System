@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23881e7d-7463-4e7c-b156-eae45e870130" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +114,22 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2586" y="262" key="FileChooserDialogImpl/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204050512" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1577204645079">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204645079" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1577204645079">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.center/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204645079" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1577204645079">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.left/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204645079" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1577204645079">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204645079" />
     <state x="2360" y="95" key="SettingsEditor" timestamp="1577204054996">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
