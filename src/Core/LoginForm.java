@@ -31,7 +31,7 @@ public class LoginForm extends Form {
         }
     }
 
-    Boolean checkAttempt(){
+    Boolean checkAttempt(){ // check number of attempts
         if(attempts >= 3){
             return false;
         }
