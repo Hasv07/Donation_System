@@ -17,6 +17,8 @@ public class Login_Scene extends Application {
     public static JFXTabPane Main_Menu;
     public static AnchorPane payment;
     public static AnchorPane Cash;
+    public static AnchorPane Credit;
+
 
 
 
@@ -69,6 +71,14 @@ public class Login_Scene extends Application {
         URL url4=  getClass().getClassLoader().getResource("UI_FXML/Cash Scene.fxml");
         try {
             Cash= FXMLLoader.load(url4);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            System.out.println("error");
+        }
+        URL url5=  getClass().getClassLoader().getResource("UI_FXML/Credit_Scene.fxml");
+        try {
+            Credit= FXMLLoader.load(url5);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
