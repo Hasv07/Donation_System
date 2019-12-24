@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23881e7d-7463-4e7c-b156-eae45e870130" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Donation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Donor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,9 @@
     <option name="height" value="980" />
   </component>
   <component name="ProjectId" id="1VR7JlIGbfOeHBJIctXzXesbED8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -39,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jfoenix-8.0.8.jar!/" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -110,6 +116,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1577205351127">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577205351127" />
     <state x="2586" y="262" key="FileChooserDialogImpl" timestamp="1577204050512">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -130,10 +140,10 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204645079" />
-    <state x="2360" y="95" key="SettingsEditor" timestamp="1577204054996">
+    <state x="2360" y="95" key="SettingsEditor" timestamp="1577206332001">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2360" y="95" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204054996" />
+    <state x="2360" y="95" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577206332001" />
     <state x="2575" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577203990397">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
