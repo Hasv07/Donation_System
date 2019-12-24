@@ -13,9 +13,9 @@ public abstract class User {
     private String phoneNumber;
 
 
-    public ArrayList executeSearch(Search search){
+    public ArrayList executeSearch(SearchManager search){
 
-
+    return new ArrayList() ;
     }
 
 

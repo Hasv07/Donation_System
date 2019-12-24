@@ -11,6 +11,6 @@ public class RegisterationForm extends Form{
 
     //on submit we should add user to users list in database
 
-    void executeAddDonorOperation(addDonorOperation:AddDonorOperation){
+    void executeAddDonorOperation(AddDonorOperation addDonorOperation){
     }
 }

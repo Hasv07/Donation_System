@@ -8,7 +8,7 @@ public class Admin extends User{
     public void executeDonorOperation(DonorOperation donorOperation){
 
     }
-    public void executeCharityOperation(CharityOperation charityOperation){
+    public void executeCharityOperation(int charityOperation){
 
     }
 
