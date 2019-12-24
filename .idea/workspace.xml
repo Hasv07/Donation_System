@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23881e7d-7463-4e7c-b156-eae45e870130" name="Default Changelist" comment="">
+
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,17 +16,20 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/CreditPayment.java">
+        <entry file="file://$PROJECT_DIR$/src/UI/Login_Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="136">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/Core/CashPayment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -73,6 +79,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+
             </state>
           </provider>
         </entry>
@@ -82,11 +89,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+
         <entry file="file://$PROJECT_DIR$/src/Core/Charity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="748">
@@ -105,6 +114,7 @@
                 <element signature="method#getEmail#0;class#Charity#0" />
                 <element signature="method#setEmail#0;class#Charity#0" />
               </folding>
+
             </state>
           </provider>
         </entry>
@@ -156,13 +166,19 @@
     <option name="height" value="1047" />
   </component>
   <component name="ProjectId" id="1VR7JlIGbfOeHBJIctXzXesbED8" />
+
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+
       <pane id="Scope" />
       <pane id="PackagesPane" />
+
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,10 +202,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
             </path>
+
+            <path>
+              <item name="Donation_System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Donation_System" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+
           </expand>
           <select />
         </subPane>
       </pane>
+
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -201,7 +229,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577210107224" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jfoenix-8.0.8.jar!/" />
+
     <property name="project.structure.last.edited" value="Libraries" />
+
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -284,6 +314,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -312,9 +343,14 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Run" order="8" weight="0.4091904" />
+
     </layout>
   </component>
   <component name="WindowStateProjectService">
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1577205351127">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577205351127" />
     <state x="2586" y="262" key="FileChooserDialogImpl" timestamp="1577204050512">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -335,16 +371,17 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204645079" />
-    <state x="2360" y="95" key="SettingsEditor" timestamp="1577204054996">
+    <state x="2360" y="95" key="SettingsEditor" timestamp="1577206332001">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2360" y="95" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577204054996" />
+    <state x="2360" y="95" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577206332001" />
     <state x="2575" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577203990397">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2575" y="345" key="com.intellij.ide.util.TipDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577203990397" />
   </component>
   <component name="editorHistoryManager">
+
     <entry file="file://$PROJECT_DIR$/out/UI_FXML/Login_Controller.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-202">
@@ -483,6 +520,7 @@
             <element signature="method#getEmail#0;class#Charity#0" />
             <element signature="method#setEmail#0;class#Charity#0" />
           </folding>
+
         </state>
       </provider>
     </entry>
@@ -503,7 +541,9 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+
           <last-edited>No facets are configured</last-edited>
+
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -563,4 +603,8 @@
       </state>
     </states>
   </component>
+
 </project>
+
+</project>
+
