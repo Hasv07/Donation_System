@@ -1,7 +1,11 @@
 package UI_FXML;
+import Core.Form;
+import Core.LoginForm;
 import UI.Login_Scene;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTabPane;
+import com.jfoenix.controls.JFXTextField;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -28,6 +32,13 @@ public class Login_Controller {
     @FXML
     private JFXButton Login;
 
+    @FXML
+    JFXTextField userName;
+
+    @FXML
+    JFXPasswordField passWord;
+
+
     public void RegisterButton_pressesed() {
         s.getSelectionModel().select(tab1);
         registered.setText("You have been registered successfully");
@@ -49,9 +60,8 @@ public class Login_Controller {
 
     }
     public void LoginButton_pressed(){
-        Scene scene=new Scene(Login_Scene.Main_Menu);
 
-        Login_Scene.primaryStage.setScene(scene);
-        Login_Scene.primaryStage.show();
+        LoginForm user=new LoginForm(userName.getText(),passWord.getText());
+
     }
 }

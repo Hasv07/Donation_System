@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class DatabaseManager {
 
-   private ArrayList<User>user=new ArrayList<User>();
+   private static ArrayList<User>user=new ArrayList<User>();
    private ArrayList<Charity>charity=new ArrayList<Charity>();
 
    
-    public ArrayList<User> getUser() {
+    public static ArrayList<User> getUser() {
         return user;
     }
 
