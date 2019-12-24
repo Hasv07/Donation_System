@@ -4,8 +4,17 @@
     <list default="true" id="23881e7d-7463-4e7c-b156-eae45e870130" name="Default Changelist" comment="">
 
 
+
+      <change afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Donation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Donor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Donation_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Donation_System.iml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,22 +107,18 @@
 
         <entry file="file://$PROJECT_DIR$/src/Core/Charity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-              <folding>
-                <element signature="method#getId#0;class#Charity#0" />
-                <element signature="method#setId#0;class#Charity#0" />
-                <element signature="method#getName#0;class#Charity#0" />
-                <element signature="method#setName#0;class#Charity#0" />
-                <element signature="method#getCategory#0;class#Charity#0" />
-                <element signature="method#setCategory#0;class#Charity#0" />
-                <element signature="method#getDescription#0;class#Charity#0" />
-                <element signature="method#setDescription#0;class#Charity#0" />
-                <element signature="method#getLink#0;class#Charity#0" />
-                <element signature="method#setLink#0;class#Charity#0" />
-                <element signature="method#getEmail#0;class#Charity#0" />
-                <element signature="method#setEmail#0;class#Charity#0" />
-              </folding>
+
+            <state relative-caret-position="153">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Core/SearchManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
 
             </state>
           </provider>
@@ -121,6 +126,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Login_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
@@ -145,25 +156,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Core/Payment.java" />
-        <option value="$PROJECT_DIR$/src/Core/CreditCard.java" />
-        <option value="$PROJECT_DIR$/src/Core/CreditPayment.java" />
-        <option value="$PROJECT_DIR$/src/Core/CashPayment.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/Core/MoneyDonation.java" />
-        <option value="$PROJECT_DIR$/src/Core/CharityOperation.java" />
-        <option value="$PROJECT_DIR$/src/Core/AddCharityOperation.java" />
-        <option value="$PROJECT_DIR$/src/Core/ClothesDonation.java" />
-        <option value="$PROJECT_DIR$/src/Core/EditCharityOperation.java" />
-        <option value="$PROJECT_DIR$/src/Core/RemoveCharityOperation.java" />
-        <option value="$PROJECT_DIR$/src/Core/Charity.java" />
+
+        <option value="$PROJECT_DIR$/src/Core/SearchManager.java" />
+        <option value="$PROJECT_DIR$/src/Core/DatabaseManager.java" />
+
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+
+    <option name="x" value="84" />
+    <option name="y" value="33" />
+    <option name="width" value="1752" />
+    <option name="height" value="981" />
+
   </component>
   <component name="ProjectId" id="1VR7JlIGbfOeHBJIctXzXesbED8" />
 
@@ -382,19 +388,10 @@
   </component>
   <component name="editorHistoryManager">
 
-    <entry file="file://$PROJECT_DIR$/out/UI_FXML/Login_Controller.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <folding>
-            <element signature="e#0#1638#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -467,59 +464,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/MoneyDonation.java">
+
+    <entry file="file://$PROJECT_DIR$/src/UI/Login_Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="34" />
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/ClothesDonation.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/SearchManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/AddCharityOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/EditCharityOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/RemoveCharityOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Charity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="method#getId#0;class#Charity#0" />
-            <element signature="method#setId#0;class#Charity#0" />
-            <element signature="method#getName#0;class#Charity#0" />
-            <element signature="method#setName#0;class#Charity#0" />
-            <element signature="method#getCategory#0;class#Charity#0" />
-            <element signature="method#setCategory#0;class#Charity#0" />
-            <element signature="method#getDescription#0;class#Charity#0" />
-            <element signature="method#setDescription#0;class#Charity#0" />
-            <element signature="method#getLink#0;class#Charity#0" />
-            <element signature="method#setLink#0;class#Charity#0" />
-            <element signature="method#getEmail#0;class#Charity#0" />
-            <element signature="method#setEmail#0;class#Charity#0" />
-          </folding>
+
+        <state relative-caret-position="153">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
 
         </state>
       </provider>
