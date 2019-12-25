@@ -134,8 +134,12 @@ public class Main_Controller {
 
          FileChooser fileChooser = new FileChooser();
         File selectedFile = fileChooser.showOpenDialog(Login_Scene.primaryStage);
-        Image image = new Image(selectedFile.toURI().toString());
-        Profile_picture.setImage(image);
+        try {
+            Image image = new Image(selectedFile.toURI().toString());
+            Profile_picture.setImage(image);
+        }catch ( Exception e){
+            System.out.println("you don't change your profile picture");
+        }
     }
     public void Clothes_Donation_pressed()
     {
