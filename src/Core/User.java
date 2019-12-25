@@ -13,11 +13,11 @@ public abstract class User implements Serializable {
     private String address;
     private String phoneNumber;
 
-    public static int getId() {
+    public  int getId() {
         return id;
     }
 
-    public static void setId(int id) {
+    public  void setId(int id) {
         User.id = id;
     }
 
