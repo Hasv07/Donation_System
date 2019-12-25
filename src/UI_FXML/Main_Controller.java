@@ -15,6 +15,8 @@ public class Main_Controller {
     private JFXButton Money_Donation;
     @FXML
     ObservableList<String> Categoryopt = FXCollections.observableArrayList("Money Donations","Clothes Donations");
+
+    @FXML
     private Tab Donate_tab;
 
     @FXML
@@ -41,6 +43,14 @@ public class Main_Controller {
     JFXTextField chPhoneNumber;
     @FXML
     JFXTextField chWebsite;
+    @FXML
+    JFXComboBox combo1;
+    @FXML
+    JFXComboBox combo2;
+    @FXML
+    JFXTextField amountMoney;
+    @FXML
+    JFXTextField amountClothes;
 
 
     public void inistiate(){
@@ -60,5 +70,10 @@ public class Main_Controller {
         AddCharityOperation addCharityOperation = new AddCharityOperation(charity);
         addCharityOperation.excute(charity);
         System.out.println(charity.getCategory());
+        ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
+        for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
+            MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+        }
+        combo1.setItems(MoneyCharity);
     }
 }
