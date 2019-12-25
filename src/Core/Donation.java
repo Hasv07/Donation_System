@@ -39,8 +39,8 @@ public abstract class Donation {
         this.charityId = charityId;
     }
 
-    public void addDonation(){
-
+    public void addDonation(Donation donation){
+        DatabaseManager.getInstance().insertDonation(donation);
     }
 
     public void editDonation(){
