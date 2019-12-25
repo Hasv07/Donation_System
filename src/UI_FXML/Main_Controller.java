@@ -105,10 +105,15 @@ public class Main_Controller {
 
     public void inistiate(){
         address.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getAddress());
+        address.setEditable(false);
         phone.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPhoneNumber());
+        phone.setEditable(false);
         email.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getEmail());
+        email.setEditable(false);
         pas.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPassword());
+        pas.setEditable(false);
         userN.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getUsername());
+        userN.setEditable(false);
         Category.setItems(Categoryopt);
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
         ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
@@ -221,24 +226,23 @@ public class Main_Controller {
 
         timer.play();
     }
-    public void Submit_Charity(){
-        flag=false;
-        ui.flag=true;
+    public void Submit_Charity() {
+        flag = false;
+        ui.flag = true;
         System.out.println("Hello");
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
 
-            if(flag==false)
+            if (flag == false)
                 Submit_tab.setContent(Login_Scene.Submit);
             else {
 
                 //Donate_tab.setContent(Donate_Pane);
 
-                Scene scene =new Scene(Login_Scene.Main_Menu);
+                Scene scene = new Scene(Login_Scene.Main_Menu);
                 Login_Scene.Main_Menu.getSelectionModel().select(3);
 
                 Login_Scene.primaryStage.setScene(scene);
-
 
 
                 timer.stop();
@@ -249,15 +253,15 @@ public class Main_Controller {
         timer.setCycleCount(-1);
 
         timer.play();
-        Charity charity = new Charity(chName.getText(),Category.getSelectionModel().selectedItemProperty().getValue().toString(),Desc.getText(),chWebsite.getText(),chEmail.getText());
+        Charity charity = new Charity(chName.getText(), Category.getSelectionModel().selectedItemProperty().getValue().toString(), Desc.getText(), chWebsite.getText(), chEmail.getText());
         AddCharityOperation addCharityOperation = new AddCharityOperation(charity);
         addCharityOperation.excute(charity);
         System.out.println(charity.getCategory());
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
         ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
 
-        for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
-            if(DatabaseManager.getInstance().queryCharities().get(i).getCategory().equals("Money Donations"))
+        for (int i = 0; i < DatabaseManager.getInstance().queryCharities().size(); i++) {
+            if (DatabaseManager.getInstance().queryCharities().get(i).getCategory().equals("Money Donations"))
                 MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
             else
                 ClothesCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
@@ -266,6 +270,45 @@ public class Main_Controller {
         combo1.setItems(MoneyCharity);
         combo2.setItems(ClothesCharity);
     }
+    public void address_Edit()
+    {
+     DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(address.getText());
 
+        address.setEditable(true);
 
+    }
+
+    public void phone_Edit()
+    {
+
+        DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(phone.getText());
+
+        phone.setEditable(true);
+
+    }
+
+  public void email_Edit() {
+
+    DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(email.getText());
+
+    email.setEditable(true);
 }
+    public void pas_Edit()
+    {
+
+
+        DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(pas.getText());
+
+        pas.setEditable(true);
+
+    }
+    public void userN_Edit()
+    {
+
+
+        DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(userN.getText());
+
+        userN.setEditable(true);
+    }
+}
+

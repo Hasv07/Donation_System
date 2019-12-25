@@ -39,7 +39,7 @@
                      </font>
                   </Label>
                   <JFXTextField fx:id="userN" layoutX="177.0" layoutY="136.0" prefHeight="31.0" prefWidth="272.0" />
-                  <JFXButton layoutX="460.0" layoutY="136.0" prefHeight="45.0" prefWidth="122.0" text="Edit">
+                  <JFXButton layoutX="460.0" layoutY="136.0" onMouseClicked="#userN_Edit" prefHeight="45.0" prefWidth="122.0" text="Edit">
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="36.0">
                            <image>
@@ -51,7 +51,7 @@
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="467.0" layoutY="226.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="467.0" layoutY="226.0" onMouseClicked="#pas_Edit" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="36.0">
                            <image>
@@ -68,7 +68,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXButton layoutX="472.0" layoutY="308.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="472.0" layoutY="308.0" onMouseClicked="#email_Edit" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -87,7 +87,7 @@
                   </Label>
                   <JFXPasswordField fx:id="pas" layoutX="174.0" layoutY="226.0" prefHeight="31.0" prefWidth="276.0" />
                   <JFXTextField fx:id="email" layoutX="176.0" layoutY="315.0" prefHeight="31.0" prefWidth="272.0" />
-                  <JFXButton layoutX="471.0" layoutY="389.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="471.0" layoutY="389.0" onMouseClicked="#phone_Edit" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -105,7 +105,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXButton layoutX="471.0" layoutY="465.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="471.0" layoutY="465.0" onMouseClicked="#address_Edit" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <font>
                         <Font size="20.0" />
                      </font>

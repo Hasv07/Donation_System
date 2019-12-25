@@ -16,6 +16,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -149,6 +150,8 @@ public class Login_Controller {
         //System.out.println(DatabaseManager.getUser().get(0).getUsername());
         //System.out.println(DatabaseManager.getUser().get(0).getPassword());
         LoginForm user=new LoginForm(userName.getText(),passWord.getText());
+        userName.setUnFocusColor(Color.RED);
+        passWord.setUnFocusColor(Color.RED);
        // Scene scene=new Scene(Login_Scene.Main_Menu);
 
         //Login_Scene.primaryStage.setScene(scene);
