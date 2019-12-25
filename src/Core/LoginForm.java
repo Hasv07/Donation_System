@@ -42,15 +42,15 @@ public class LoginForm extends Form {
     }
 
     boolean checkCredentials(){
-        for (int i = 0; i <DatabaseManager.getUser().size() ; i++) {
-            System.out.println(DatabaseManager.getUser().get(i).getUsername());
-            System.out.println(DatabaseManager.getUser().get(i).getPassword());
-            System.out.println("-------------");
-            System.out.println(getUserName());
-            System.out.println(getPassword());
-            System.out.println("Checking");
-            if (DatabaseManager.getUser().get(i).getUsername().equals(getUserName()) &&
-                    DatabaseManager.getUser().get(i).getPassword().equals(getPassword())){          //if name and pass equal on of users list
+        for (int i = 0; i <DatabaseManager.getInstance().queryDonors().size() ; i++) {
+            //System.out.println(DatabaseManager.getUser().get(i).getPassword());
+            //System.out.println("-------------");
+            //System.out.println(DatabaseManager.getUser().get(i).getUsername());
+            //System.out.println(getUserName());
+            //System.out.println(getPassword());
+            //System.out.println("Checking");
+            if (DatabaseManager.getInstance().queryDonors().get(i).getUsername().equals(getUserName()) &&
+                    DatabaseManager.getInstance().queryDonors().get(i).getPassword().equals(getPassword())){          //if name and pass equal on of users list
                 System.out.println("Checked");
                 return true;
             }

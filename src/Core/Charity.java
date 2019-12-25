@@ -1,12 +1,23 @@
 package Core;
 
-public class Charity {
-    private int id;
+import java.io.Serializable;
+
+public class Charity implements Serializable {
+    private static int id=1;
     private String name;
     private String category;
     private String description;
     private String link;
     private String email;
+
+    public Charity(String name, String category, String description, String link, String email) {
+        this.id++;
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.link = link;
+        this.email = email;
+    }
 
     public int getId() {
         return id;
@@ -56,16 +67,18 @@ public class Charity {
         this.email = email;
     }
 
-    public void addCharity(){
-        AddCharityOperation add = new AddCharityOperation();
-        add.excute();
+    public void addCharity(Charity charity){
+       // AddCharityOperation add = new AddCharityOperation();
+       // add.excute();
+        DatabaseManager.getInstance().insertCharity(charity);
+
     }
     public void removeCharity(){
-        RemoveCharityOperation remove = new RemoveCharityOperation();
-        remove.excute();
+       //RemoveCharityOperation remove = new RemoveCharityOperation();
+        //remove.excute();
     }
     public void editCharity(){
-        EditCharityOperation edit = new EditCharityOperation();
-        edit.excute();
+        //EditCharityOperation edit = new EditCharityOperation();
+        //edit.excute();
     }
 }

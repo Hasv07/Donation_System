@@ -53,7 +53,9 @@ public class Login_Controller {
     public void RegisterButton_pressesed() {
         s.getSelectionModel().select(tab1);
         Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
-        DatabaseManager.user.add(donor);
+        //DatabaseManager.getInstance().insertDonor(donor);
+        AddDonorOperation addDonorOperation = new AddDonorOperation(donor);
+        addDonorOperation.execute(donor);
         registered.setText("You have been registered successfully");
         registered.setOpacity(1);
         this.Text_disappearence = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {

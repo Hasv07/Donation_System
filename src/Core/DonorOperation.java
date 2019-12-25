@@ -2,6 +2,6 @@ package Core;
 
 public interface DonorOperation {
 
-    void execute();
+    void execute(Donor donor);
 
 }

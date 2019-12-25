@@ -1,6 +1,8 @@
 package Core;
 
-public class Donor extends User {
+import java.io.Serializable;
+
+public class Donor extends User implements Serializable {
 
     private int rank;
 
@@ -12,11 +14,11 @@ public class Donor extends User {
 
     }
 
-    public void addDonor(){
-
+    public void addDonor(Donor donor){
+        DatabaseManager.getInstance().insertDonor(donor);
     }
-    public void removeDonor(){
-
+    public void removeDonor(Donor donor){
+        DatabaseManager.getInstance().deleteDonor(donor.getUsername());
     }
     public void editDonor(){
 
