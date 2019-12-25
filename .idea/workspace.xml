@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f357ed5-2a23-4bc9-9b60-44501bea6dce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/charities.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/charities.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donors.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/donors.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI/Login_Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/UI/Login_Scene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Login_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/UI_FXML/Login_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Main_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/UI_FXML/Main_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Login_Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Login_Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI_FXML/Main_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI_FXML/Main_Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +23,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/Login_Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="280">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#932#933#0" expanded="true" />
+                <element signature="e#960#961#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,11 +58,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2426">
-              <caret line="225" column="4" selection-start-line="225" selection-start-column="4" selection-end-line="225" selection-end-column="4" />
+            <state relative-caret-position="284">
+              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -72,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/UI_FXML/Login_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
@@ -100,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/Core/LoginForm.java" />
         <option value="$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml" />
         <option value="$PROJECT_DIR$/src/UI_FXML/Login_Controller.java" />
+        <option value="$PROJECT_DIR$/src/UI/Login_Scene.java" />
         <option value="$PROJECT_DIR$/src/UI_FXML/Main_Controller.java" />
       </list>
     </option>
@@ -251,7 +270,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -260,7 +279,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24504249" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24504249" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,25 +429,7 @@
     <entry file="file://$PROJECT_DIR$/src/UI_FXML/Login_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Login_Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="278" selection-start-line="18" selection-start-column="278" selection-end-line="18" selection-end-column="278" />
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
@@ -446,10 +447,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Login_Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2426">
-          <caret line="225" column="4" selection-start-line="225" selection-start-column="4" selection-end-line="225" selection-end-column="4" />
+        <state relative-caret-position="284">
+          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
