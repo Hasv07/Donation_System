@@ -26,8 +26,10 @@ public class Main_Controller {
     Animation timer;
     Login_Scene ui;
     static boolean flag;
+/*
     Animation Donation_History;
     static boolean flag2=false;
+*/
 
 
 
@@ -83,19 +85,22 @@ public class Main_Controller {
     JFXTextField amountMoney;
     @FXML
     JFXTextField amountClothes;
-   // Main_Controller()
-   // {
-   //     this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-    //      if (flag==true)
-    //      {
-    //
-    //      }
-//
-  //      }));
-    //    Donation_History.setCycleCount(-1);
-//
-  //      Donation_History.play();
-   // }
+
+
+/*    Main_Controller()
+    {
+        this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
+          if (flag==true)
+          {
+
+          }
+
+        }));
+        Donation_History.setCycleCount(-1);
+
+        Donation_History.play();
+    }*/
+
 
 
     public void inistiate(){
@@ -106,20 +111,27 @@ public class Main_Controller {
         userN.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getUsername());
         Category.setItems(Categoryopt);
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
+        ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
 
         for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
+            if(DatabaseManager.getInstance().queryCharities().get(i).getCategory().equals("Money Donations"))
             MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+            else
+                ClothesCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+
         }
         combo1.setItems(MoneyCharity);
-
+        combo2.setItems(ClothesCharity);
     }
 
     public void Money_Donation_pressed()
     {
         flag=false;
         ui.flag=true;
+
         MoneyDonation moneyDonation = new MoneyDonation(1,Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getId());
         moneyDonation.addDonation();
+
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
             if(flag==false)
             Donate_tab.setContent(Login_Scene.payment);
@@ -245,11 +257,18 @@ public class Main_Controller {
         addCharityOperation.excute(charity);
         System.out.println(charity.getCategory());
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
+        ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
 
         for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
-            MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+            if(DatabaseManager.getInstance().queryCharities().get(i).getCategory().equals("Money Donations"))
+                MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+            else
+                ClothesCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+
         }
         combo1.setItems(MoneyCharity);
+        combo2.setItems(ClothesCharity);
     }
-    
+
+
 }

@@ -3,14 +3,13 @@ package Core;
 import java.io.Serializable;
 
 public abstract class Donation implements Serializable {
-    private static int id=1;
+    private int id;
     private double amount;
     private int donorId;
     private int charityId;
 
     public Donation(int id, double amount, int donorId, int charityId) {
         this.id = id;
-        this.id++;
         this.amount = amount;
         this.donorId = donorId;
         this.charityId = charityId;
