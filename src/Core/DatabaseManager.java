@@ -33,7 +33,7 @@ public class DatabaseManager {
     }
 
 
-    public void insertUser(Donor donor) {
+    public void insertDonor(Donor donor) {
        donors.add(donor);
     }
 
@@ -43,7 +43,9 @@ public class DatabaseManager {
     }
 
 
-    
+
+
+
 
 
 }
