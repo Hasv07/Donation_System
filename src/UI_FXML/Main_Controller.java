@@ -157,6 +157,17 @@ int  i=0;
         }
         combo1.setItems(MoneyCharity);
         combo2.setItems(ClothesCharity);
+        ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
+        ObservableList<Donation> Donations = FXCollections.observableArrayList();
+        Donations.addAll(donations);
+        System.out.println(donations.get(0).getId());
+        id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
+        Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
+        Charity.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityName"));
+        Donation_Type.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityCategory"));
+
+        table.setItems(Donations);
+
     }
 
     public void Money_Donation_pressed()
@@ -190,12 +201,16 @@ int  i=0;
 
         timer.play();
         //animation();
+
         ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
         ObservableList<Donation> Donations = FXCollections.observableArrayList();
         Donations.addAll(donations);
         System.out.println(donations.get(0).getId());
         id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
         Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
+        Charity.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityName"));
+        Donation_Type.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityCategory"));
+
         table.setItems(Donations);
     }
     public void Browse()
@@ -244,8 +259,10 @@ int  i=0;
         System.out.println(donations.get(0).getId());
         id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
         Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
-       table.setItems(Donations);
-       // table.getItems().setAll(donations);
+        Charity.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityName"));
+        Donation_Type.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityCategory"));
+
+        table.setItems(Donations);
 
 
 
