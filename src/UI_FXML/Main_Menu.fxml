@@ -14,6 +14,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI_FXML.Main_Controller" onMouseEntered="#inistiate" >
@@ -38,7 +39,7 @@
                      </font>
                   </Label>
                   <JFXTextField fx:id="userN" layoutX="177.0" layoutY="136.0" prefHeight="31.0" prefWidth="272.0"/>
-                  <JFXButton layoutX="506.0" layoutY="136.0" prefHeight="45.0" prefWidth="122.0" text="Edit">
+                  <JFXButton layoutX="460.0" layoutY="136.0" prefHeight="45.0" prefWidth="122.0" text="Edit">
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="36.0">
                            <image>
@@ -50,7 +51,7 @@
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="513.0" layoutY="226.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="467.0" layoutY="226.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="36.0">
                            <image>
@@ -67,7 +68,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXButton layoutX="515.0" layoutY="311.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="472.0" layoutY="308.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -86,7 +87,7 @@
                   </Label>
                   <JFXPasswordField fx:id="pas" layoutX="174.0" layoutY="226.0" prefHeight="31.0" prefWidth="276.0"/>
                   <JFXTextField fx:id="email" layoutX="176.0" layoutY="315.0" prefHeight="31.0" prefWidth="272.0"  />
-                  <JFXButton layoutX="519.0" layoutY="389.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="471.0" layoutY="389.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -104,7 +105,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXButton layoutX="521.0" layoutY="475.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
+                  <JFXButton layoutX="471.0" layoutY="465.0" prefHeight="45.0" prefWidth="109.0" text="Edit">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -122,6 +123,20 @@
                      </font>
                   </Label>
                   <JFXTextField fx:id="address" layoutX="180.0" layoutY="472.0" prefHeight="31.0" prefWidth="272.0"  />
+                  <JFXButton fx:id="Browse" layoutX="622.0" layoutY="268.0" onMouseClicked="#Browse" prefHeight="80.0" prefWidth="183.0" text="Browse">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="66.0">
+                           <image>
+                              <Image url="@Resourses/Browse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="605.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <ImageView fx:id="Profile_picture" fitHeight="197.0" fitWidth="200.0" layoutX="605.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
                </children></AnchorPane>
         </content>
          <graphic>
@@ -161,10 +176,10 @@
             </ImageView>
          </graphic>
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane fx:id="Donate_Pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <JFXComboBox layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
-                  <JFXButton layoutX="501.0" layoutY="469.0" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
+                  <JFXButton fx:id="Clothes_Donation" layoutX="501.0" layoutY="469.0" onMouseClicked="#Clothes_Donation_pressed" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -226,7 +241,7 @@
             </AnchorPane>
          </content>
       </Tab>
-      <Tab text="Add Charity">
+      <Tab fx:id="Submit_tab" text="Add Charity">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -275,7 +290,7 @@
                   </Label>
                   <JFXTextField layoutX="577.0" layoutY="282.0" prefHeight="31.0" prefWidth="238.0" />
                   <JFXTextField layoutX="508.0" layoutY="332.0" prefHeight="31.0" prefWidth="309.0" />
-                  <JFXButton layoutX="630.0" layoutY="448.0" prefHeight="54.0" prefWidth="174.0" text="Submit">
+                  <JFXButton fx:id="Submit" layoutX="630.0" layoutY="448.0" onMouseClicked="#submit" prefHeight="54.0" prefWidth="174.0" text="Submit">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="43.0">
                            <image>

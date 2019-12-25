@@ -21,7 +21,7 @@ import java.net.URL;
 
 public class Login_Controller {
     Animation Text_disappearence;
-    //Login_Scene UI;
+    Login_Scene ui;
     @FXML
     private Tab tab1;
     @FXML
@@ -51,11 +51,18 @@ public class Login_Controller {
 
 
     public void RegisterButton_pressesed() {
-        s.getSelectionModel().select(tab1);
+     //   s.getSelectionModel().select(tab1);
         Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
         //DatabaseManager.getInstance().insertDonor(donor);
         AddDonorOperation addDonorOperation = new AddDonorOperation(donor);
         addDonorOperation.execute(donor);
+       // s.getSelectionModel().select(tab1);
+        ui.flag=true;
+        //Scene scene =new Scene(Login_Scene.Login);
+        //Login_Scene.Login.getSelectionModel().select(0);
+        //Login_Scene.primaryStage.setScene(scene);
+        ui.Restart=true;
+
         registered.setText("You have been registered successfully");
         registered.setOpacity(1);
         this.Text_disappearence = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
@@ -83,6 +90,9 @@ public class Login_Controller {
         //System.out.println(DatabaseManager.getUser().get(0).getUsername());
         //System.out.println(DatabaseManager.getUser().get(0).getPassword());
         LoginForm user=new LoginForm(userName.getText(),passWord.getText());
+
+        Login_Scene.primaryStage.setScene(scene);
+        Login_Scene.primaryStage.show();
 
     }
 }

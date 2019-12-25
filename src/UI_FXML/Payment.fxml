@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ChoiceBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="Payment_scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI_FXML.Payment_Controller">
    <children>
-      <ChoiceBox fx:id="Payment" layoutX="275.0" layoutY="46.0" onContextMenuRequested="#choicebox_selected" onMouseEntered="#choicebOX" prefWidth="150.0" />
       <Label layoutX="56.0" layoutY="46.0" prefHeight="37.0" prefWidth="191.0" text="Payment Method">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
       <AnchorPane fx:id="Pay_scene" layoutX="-2.0" layoutY="95.0" onMousePressed="#choicebox_selected" prefHeight="441.0" prefWidth="831.0" />
+      <JFXComboBox fx:id="Payment" layoutX="283.0" layoutY="49.0" onContextMenuRequested="#choicebox_selected" onMouseEntered="#choicebOX" prefHeight="31.0" prefWidth="152.0" />
+      <JFXButton fx:id="Back" layoutX="663.0" layoutY="26.0" onMouseClicked="#Back_pressed" text="Back">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="63.0">
+               <image>
+                  <Image url="@Resourses/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
