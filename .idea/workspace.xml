@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b39a7ae-ca8b-4e3b-b845-dbbe42a68a71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Donation_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Donation_System.iml" afterDir="false" />
+    <list default="true" id="23881e7d-7463-4e7c-b156-eae45e870130" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Donor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Donor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI/Login_Scene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Cash_Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Login_Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Main_Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Payment_Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/RegisterationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/RegisterationForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +33,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="84" />
+    <option name="y" value="33" />
+    <option name="width" value="1752" />
+    <option name="height" value="981" />
+  </component>
   <component name="ProjectId" id="1VR7JlIGbfOeHBJIctXzXesbED8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -38,11 +50,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SDK/sqlite-jdbc-3.30.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SDK/jfoenix-8.0.8.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -111,16 +122,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="612" y="190" key="#com.intellij.ide.util.MemberChooser" timestamp="1577233684659">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1577205351127">
+      <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="612" y="190" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1577233684659" />
     <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577205351127" />
-    <state x="533" y="210" key="FileChooserDialogImpl" timestamp="1577231862436">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2586" y="262" key="FileChooserDialogImpl" timestamp="1577223721852">
+      <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="533" y="210" key="FileChooserDialogImpl/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1577231862436" />
-    <state x="2586" y="262" key="FileChooserDialogImpl/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577230759603" />
+    <state x="2586" y="262" key="FileChooserDialogImpl/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577223721852" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1577226288698">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -137,11 +146,10 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577226288698" />
-    <state x="2360" y="95" key="SettingsEditor" timestamp="1577236286395">
+    <state x="2360" y="95" key="SettingsEditor" timestamp="1577223726547">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="352" y="0" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1577231865103" />
-    <state x="2360" y="95" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577236286395" />
+    <state x="2360" y="95" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1577223726547" />
     <state x="2575" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577203990397">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
