@@ -160,7 +160,7 @@ int  i=0;
         ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
         ObservableList<Donation> Donations = FXCollections.observableArrayList();
         Donations.addAll(donations);
-        System.out.println(donations.get(0).getId());
+       // System.out.println(donations.get(0).getId());
         id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
         Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
         Charity.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityName"));
@@ -227,6 +227,8 @@ int  i=0;
     }
     public void Clothes_Donation_pressed()
     {
+        ClothesDonation clothdonate = new ClothesDonation(Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getName(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getCategory());
+        clothdonate.addDonation();
         flag=false;
         ui.flag=true;
 
@@ -369,15 +371,16 @@ int  i=0;
             phone.setFocusColor(Color.BLUE);
             i++;
         }
-        else if(i==1)
-        {
-            DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setPhoneNumber(phone.getText());
-            phone.setEditable(false);
-            phone.setFocusColor(Color.GRAY);
-           i=0;
+        phone.setOnKeyPressed(e -> {
+            if (e.getCode().equals(KeyCode.ENTER)) {
+                DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setPhoneNumber(phone.getText());
+                phone.setEditable(false);
+                phone.setFocusColor(Color.GRAY);
+                i = 0;
+            }
 
         }
-
+        );
     }
 
   public void email_Edit() {
@@ -387,14 +390,14 @@ int  i=0;
           email.setFocusColor(Color.BLUE);
           i++;
       }
-      else if(i==1)
-      {
+      email.setOnKeyPressed(e -> {
+          if (e.getCode().equals(KeyCode.ENTER)) {
           DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setEmail(email.getText());
           email.setEditable(false);
           email.setFocusColor(Color.GRAY);
 
      i=0;
-      }
+      }});
 }
     public void pas_Edit()
     {
@@ -404,14 +407,14 @@ int  i=0;
             pas.setFocusColor(Color.BLUE);
             i++;
         }
-        else if(i==1)
-        {
+        pas.setOnKeyPressed(e -> {
+            if (e.getCode().equals(KeyCode.ENTER)) {
             DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setPassword(pas.getText());
             pas.setEditable(false);
             pas.setFocusColor(Color.GRAY);
 
             i=0;
-        }
+        }});
 
 
     }
@@ -423,14 +426,14 @@ int  i=0;
             userN.setFocusColor(Color.BLUE);
             i++;
         }
-        else if(i==1)
-        {
+        userN.setOnKeyPressed(e -> {
+            if (e.getCode().equals(KeyCode.ENTER)) {
             DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setName(userN.getText());
             userN.setEditable(false);
             userN.setFocusColor(Color.GRAY);
 
                i=0;
-        }
+        }});
     }
 }
 
