@@ -41,8 +41,7 @@ public abstract class Donation implements Serializable {
         this.charityId = charityId;
     }
 
-    public void addDonation(Donation donation){
-        DatabaseManager.getInstance().insertDonation(donation);
+    public void addDonation(){
     }
 
     public void editDonation(){
