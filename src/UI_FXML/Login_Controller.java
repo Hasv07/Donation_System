@@ -90,9 +90,10 @@ public class Login_Controller {
         //System.out.println(DatabaseManager.getUser().get(0).getUsername());
         //System.out.println(DatabaseManager.getUser().get(0).getPassword());
         LoginForm user=new LoginForm(userName.getText(),passWord.getText());
+       // Scene scene=new Scene(Login_Scene.Main_Menu);
 
-        Login_Scene.primaryStage.setScene(scene);
-        Login_Scene.primaryStage.show();
+        //Login_Scene.primaryStage.setScene(scene);
+        //Login_Scene.primaryStage.show();
 
     }
 }
