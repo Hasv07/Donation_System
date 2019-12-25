@@ -8,6 +8,12 @@ public abstract class Donation implements Serializable {
     private int donorId;
     private int charityId;
 
+    public Donation(int id, double amount, int donorId, int charityId) {
+        this.id = id;
+        this.amount = amount;
+        this.donorId = donorId;
+        this.charityId = charityId;
+    }
 
     public int getId() {
         return id;

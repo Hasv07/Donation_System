@@ -1,9 +1,6 @@
 package UI_FXML;
 
-import Core.AddCharityOperation;
-import Core.Charity;
-import Core.DatabaseManager;
-import Core.LoginForm;
+import Core.*;
 import UI.Login_Scene;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
@@ -88,6 +85,8 @@ public class Main_Controller {
     JFXTextField amountMoney;
     @FXML
     JFXTextField amountClothes;
+
+
 /*    Main_Controller()
     {
         this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
@@ -101,6 +100,7 @@ public class Main_Controller {
 
         Donation_History.play();
     }*/
+
 
 
     public void inistiate(){
@@ -133,6 +133,9 @@ public class Main_Controller {
     {
         flag=false;
         ui.flag=true;
+
+        MoneyDonation moneyDonation = new MoneyDonation(1,Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getId());
+        moneyDonation.addDonation();
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
             if(flag==false)
