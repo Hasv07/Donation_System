@@ -1,5 +1,6 @@
 package Core;
 
+import java.io.*;
 import java.util.ArrayList;
 
 public class DatabaseManager {
@@ -15,13 +16,70 @@ public class DatabaseManager {
 
     }
 
+
+
     public static DatabaseManager getInstance() {
         if(instance == null){
             instance=new DatabaseManager();
         }
-
+       // instance.read();
         return instance;
     }
+
+
+    private void save()  {
+        try{
+            FileOutputStream fos = new FileOutputStream("donors.tmp");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(donors);
+            oos.close();
+            fos.close();
+
+            fos= new FileOutputStream("charities.tmp");
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(charities);
+            oos.close();
+            fos.close();
+
+            fos= new FileOutputStream("donations.tmp");
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(donations);
+            oos.close();
+            fos.close();
+
+        }catch (Exception e){
+            System.out.println("failed to save");
+        }
+
+
+    }
+    private void read(){
+        try{
+            FileInputStream fis = new FileInputStream("donors.tmp");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            donors = (ArrayList<Donor>) ois.readObject();
+            ois.close();
+            fis.close();
+
+
+            fis = new FileInputStream("charities.tmp");
+            ois = new ObjectInputStream(fis);
+            charities = (ArrayList<Charity>) ois.readObject();
+            ois.close();
+            fis.close();
+
+
+            fis = new FileInputStream("donations.tmp");
+            ois = new ObjectInputStream(fis);
+            donations = (ArrayList<Donation>) ois.readObject();
+            ois.close();
+            fis.close();
+        }catch (Exception e){
+            System.out.println("failed to read");
+        }
+
+    }
+
 
 
     public  ArrayList<Donor> queryDonors( ) {
@@ -85,6 +143,7 @@ public class DatabaseManager {
         }
         return donations;
     }
+
 
 
 

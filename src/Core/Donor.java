@@ -1,6 +1,8 @@
 package Core;
 
-public class Donor extends User {
+import java.io.Serializable;
+
+public class Donor extends User implements Serializable {
 
     private int rank;
 
