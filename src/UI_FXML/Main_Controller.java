@@ -223,4 +223,5 @@ public class Main_Controller {
         }
         combo1.setItems(MoneyCharity);
     }
+    
 }
