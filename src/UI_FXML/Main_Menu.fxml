@@ -178,8 +178,8 @@
          <content>
             <AnchorPane fx:id="Donate_Pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <JFXComboBox layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
-                  <JFXButton fx:id="Clothes_Donation" layoutX="501.0" layoutY="469.0" onMouseClicked="#Clothes_Donation_pressed" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
+                  <JFXComboBox fx:id="combo2" layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
+                  <JFXButton layoutX="501.0" layoutY="469.0" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -198,7 +198,7 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <JFXComboBox layoutX="70.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
+                  <JFXComboBox fx:id="combo1" layoutX="70.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
                   <Label layoutX="70.0" layoutY="231.0" prefHeight="36.0" prefWidth="111.0" text="Select Charity:">
                      <font>
                         <Font size="17.0" />
@@ -220,8 +220,8 @@
                      </font>
                   </Label>
                   <JFXDatePicker layoutX="447.0" layoutY="350.0" prefHeight="31.0" prefWidth="230.0" />
-                  <JFXTextField layoutX="533.0" layoutY="414.0" prefHeight="31.0" prefWidth="144.0" />
-                  <JFXTextField layoutX="159.0" layoutY="335.0" prefHeight="31.0" prefWidth="129.0" />
+                  <JFXTextField fx:id="amountClothes" layoutX="533.0" layoutY="414.0" prefHeight="31.0" prefWidth="144.0"  />
+                  <JFXTextField fx:id="amountMoney" layoutX="159.0" layoutY="335.0" prefHeight="31.0" prefWidth="129.0" />
                   <Label layoutX="79.0" layoutY="335.0" prefHeight="31.0" prefWidth="72.0" text="Amount:">
                      <font>
                         <Font size="19.0" />
@@ -253,15 +253,15 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <JFXTextField layoutX="256.0" layoutY="138.0" prefHeight="31.0" prefWidth="249.0" />
+                  <JFXTextField fx:id="chName" layoutX="256.0" layoutY="138.0" prefHeight="31.0" prefWidth="249.0"  />
                   <Label layoutX="29.0" layoutY="202.0" prefHeight="32.0" prefWidth="216.0" text="International License :">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="253.0" layoutY="203.0" prefHeight="31.0" prefWidth="255.0" />
-                  <JFXTextArea layoutX="29.0" layoutY="428.0" prefHeight="98.0" prefWidth="485.0" />
-                  <JFXComboBox layoutX="189.0" layoutY="273.0" prefHeight="31.0" prefWidth="189.0" />
+                  <JFXTextField fx:id="IL" layoutX="253.0" layoutY="203.0" prefHeight="31.0" prefWidth="255.0" />
+                  <JFXTextArea fx:id="Desc" layoutX="29.0" layoutY="428.0" prefHeight="98.0" prefWidth="485.0" />
+                  <JFXComboBox fx:id="Category" layoutX="189.0" layoutY="273.0" prefHeight="31.0" prefWidth="189.0"  />
                   <Label layoutX="29.0" layoutY="273.0" prefHeight="32.0" prefWidth="103.0" text="Category :">
                      <font>
                         <Font size="20.0" />
@@ -272,7 +272,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="118.0" layoutY="332.0" prefHeight="31.0" prefWidth="255.0" />
+                  <JFXTextField fx:id="chEmail" layoutX="118.0" layoutY="332.0" prefHeight="31.0" prefWidth="255.0" />
                   <Label layoutX="29.0" layoutY="396.0" prefHeight="32.0" prefWidth="135.0" text="Description :">
                      <font>
                         <Font size="20.0" />
@@ -288,9 +288,9 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="577.0" layoutY="282.0" prefHeight="31.0" prefWidth="238.0" />
-                  <JFXTextField layoutX="508.0" layoutY="332.0" prefHeight="31.0" prefWidth="309.0" />
-                  <JFXButton fx:id="Submit" layoutX="630.0" layoutY="448.0" onMouseClicked="#submit" prefHeight="54.0" prefWidth="174.0" text="Submit">
+                  <JFXTextField fx:id="chPhoneNumber" layoutX="577.0" layoutY="282.0" prefHeight="31.0" prefWidth="238.0" />
+                  <JFXTextField fx:id="chWebsite" layoutX="508.0" layoutY="332.0" prefHeight="31.0" prefWidth="309.0"/>
+                  <JFXButton layoutX="630.0" layoutY="448.0" prefHeight="54.0" prefWidth="174.0" text="Submit" onMouseClicked="#Submit_Charity">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="43.0">
                            <image>

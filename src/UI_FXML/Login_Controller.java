@@ -31,7 +31,7 @@ public class Login_Controller {
     @FXML
     private JFXButton Login;
     @FXML
-    JFXTextField userName;
+     public  JFXTextField userName;
     @FXML
     JFXPasswordField passWord;
     @FXML
@@ -86,6 +86,7 @@ public class Login_Controller {
             Login.setDisable(true);
 
         }
+        System.out.println(userName.getText());
         //System.out.println(DatabaseManager.getUser().get(0).getName());
         //System.out.println(DatabaseManager.getUser().get(0).getUsername());
         //System.out.println(DatabaseManager.getUser().get(0).getPassword());

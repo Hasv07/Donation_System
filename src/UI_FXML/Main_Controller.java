@@ -1,6 +1,9 @@
 package UI_FXML;
 
+import Core.AddCharityOperation;
+import Core.Charity;
 import Core.DatabaseManager;
+import Core.LoginForm;
 import UI.Login_Scene;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
@@ -8,6 +11,9 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import com.jfoenix.controls.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
@@ -24,10 +30,14 @@ public class Main_Controller {
     Login_Scene ui;
     static boolean flag;
 
+
+
     @FXML
     private JFXButton Money_Donation;
     @FXML
     private JFXButton Clothes_Donation;
+    ObservableList<String> Categoryopt = FXCollections.observableArrayList("Money Donations","Clothes Donations");
+
     @FXML
     private Tab Donate_tab;
 
@@ -51,14 +61,36 @@ public class Main_Controller {
     private JFXButton Browse;
     @FXML
     private JFXButton Submit;
+    JFXTextField chName;
+    @FXML
+    JFXTextField IL;
+    @FXML
+    JFXTextArea Desc;
+    @FXML
+    JFXTextField chEmail;
+    @FXML
+    JFXComboBox Category;
+    @FXML
+    JFXTextField chPhoneNumber;
+    @FXML
+    JFXTextField chWebsite;
+    @FXML
+    JFXComboBox combo1;
+    @FXML
+    JFXComboBox combo2;
+    @FXML
+    JFXTextField amountMoney;
+    @FXML
+    JFXTextField amountClothes;
 
 
     public void inistiate(){
-        address.setText(DatabaseManager.getInstance().queryDonors().get(0).getAddress());
-        phone.setText(DatabaseManager.getInstance().queryDonors().get(0).getPhoneNumber());
-        email.setText(DatabaseManager.getInstance().queryDonors().get(0).getEmail());
-        pas.setText(DatabaseManager.getInstance().queryDonors().get(0).getPassword());
-        userN.setText(DatabaseManager.getInstance().queryDonors().get(0).getUsername());
+        address.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getAddress());
+        phone.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPhoneNumber());
+        email.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getEmail());
+        pas.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPassword());
+        userN.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getUsername());
+        Category.setItems(Categoryopt);
     }
 
     public void Money_Donation_pressed()
@@ -153,5 +185,16 @@ public class Main_Controller {
         timer.setCycleCount(-1);
 
         timer.play();
+    }
+    public void Submit_Charity(){
+        Charity charity = new Charity(chName.getText(),Category.getSelectionModel().selectedItemProperty().getValue().toString(),Desc.getText(),chWebsite.getText(),chEmail.getText());
+        AddCharityOperation addCharityOperation = new AddCharityOperation(charity);
+        addCharityOperation.excute(charity);
+        System.out.println(charity.getCategory());
+        ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
+        for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
+            MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+        }
+        combo1.setItems(MoneyCharity);
     }
 }
