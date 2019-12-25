@@ -114,7 +114,7 @@ public class Main_Controller {
             MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
         }
         combo1.setItems(MoneyCharity);
-
+        combo2.setItems(MoneyCharity);
     }
 
     public void Money_Donation_pressed()
@@ -252,6 +252,7 @@ public class Main_Controller {
             MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
         }
         combo1.setItems(MoneyCharity);
+        combo2.setItems(MoneyCharity);
     }
     
 }

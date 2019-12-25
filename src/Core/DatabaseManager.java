@@ -93,18 +93,15 @@ public class DatabaseManager {
         return charities;
     }
 
-
     public void insertDonor(Donor donor) {
        donors.add(donor);
        this.save();
     }
 
-
     public void insertCharity(Charity charity) {
         charities.add(charity);
         this.save();
     }
-
 
     public Donor queryDonor(String username){
         for ( Donor donor: donors) {
@@ -122,7 +119,6 @@ public class DatabaseManager {
         return null;
     }
 
-
     public void deleteDonor(String username){
         Donor donor=queryDonor(username);
         donors.remove(donor);
@@ -134,7 +130,6 @@ public class DatabaseManager {
         charities.remove(charity);
         this.save();
     }
-
 
     public void insertDonation(Donation donation){
         donations.add(donation);
