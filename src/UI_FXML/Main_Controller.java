@@ -19,7 +19,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
@@ -36,7 +38,7 @@ public class Main_Controller {
 
 
 
-static Integer i=1;
+int  i=0;
     @FXML
     private JFXButton Money_Donation;
     @FXML
@@ -122,15 +124,27 @@ static Integer i=1;
     public void inistiate(){
         address.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getAddress());
         address.setEditable(false);
+        address.setFocusColor(Color.GRAY);
+
         phone.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPhoneNumber());
         phone.setEditable(false);
+        phone.setFocusColor(Color.GRAY);
+
         email.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getEmail());
         email.setEditable(false);
+        email.setFocusColor(Color.GRAY);
+
         pas.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPassword());
         pas.setEditable(false);
+        pas.setFocusColor(Color.GRAY);
+
         userN.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getUsername());
         userN.setEditable(false);
+        userN.setFocusColor(Color.GRAY);
+
         Category.setItems(Categoryopt);
+        address.setFocusColor(Color.GRAY);
+
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
         ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
 
@@ -177,7 +191,7 @@ static Integer i=1;
         timer.play();
         //animation();
         ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
-        ObservableList<Donation> Donations = FXCollections.observableArrayList(new MoneyDonation(0,0,0,0));
+        ObservableList<Donation> Donations = FXCollections.observableArrayList();
         Donations.addAll(donations);
         System.out.println(donations.get(0).getId());
         id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
@@ -310,45 +324,96 @@ static Integer i=1;
         combo1.setItems(MoneyCharity);
         combo2.setItems(ClothesCharity);
     }
-    public void address_Edit()
-    {
-     DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(address.getText());
+    public void address_Edit() {
+        if (i == 0) {
+            address.setEditable(true);
+            address.setFocusColor(Color.BLUE);
+            i++;
+        }
+            address.setOnKeyPressed(e -> {
+                if (e.getCode().equals(KeyCode.ENTER)) {
+                    DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(address.getText());
+                    address.setEditable(false);
+                    address.setFocusColor(Color.GRAY);
+                    i = 0;
 
-        address.setEditable(true);
+                }
+            });
 
+
+        
     }
 
     public void phone_Edit()
     {
 
-        DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(phone.getText());
+        if(i==0) {
+            phone.setEditable(true);
+            phone.setFocusColor(Color.BLUE);
+            i++;
+        }
+        else if(i==1)
+        {
+            DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setPhoneNumber(phone.getText());
+            phone.setEditable(false);
+            phone.setFocusColor(Color.GRAY);
+           i=0;
 
-        phone.setEditable(true);
+        }
 
     }
 
   public void email_Edit() {
 
-    DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(email.getText());
+      if(i==0) {
+          email.setEditable(true);
+          email.setFocusColor(Color.BLUE);
+          i++;
+      }
+      else if(i==1)
+      {
+          DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setEmail(email.getText());
+          email.setEditable(false);
+          email.setFocusColor(Color.GRAY);
 
-    email.setEditable(true);
+     i=0;
+      }
 }
     public void pas_Edit()
     {
 
+        if(i==0) {
+            pas.setEditable(true);
+            pas.setFocusColor(Color.BLUE);
+            i++;
+        }
+        else if(i==1)
+        {
+            DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setPassword(pas.getText());
+            pas.setEditable(false);
+            pas.setFocusColor(Color.GRAY);
 
-        DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(pas.getText());
+            i=0;
+        }
 
-        pas.setEditable(true);
 
     }
     public void userN_Edit()
     {
 
+        if(i==0) {
+            userN.setEditable(true);
+            userN.setFocusColor(Color.BLUE);
+            i++;
+        }
+        else if(i==1)
+        {
+            DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setName(userN.getText());
+            userN.setEditable(false);
+            userN.setFocusColor(Color.GRAY);
 
-        DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).setAddress(userN.getText());
-
-        userN.setEditable(true);
+               i=0;
+        }
     }
 }
 

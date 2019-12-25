@@ -61,6 +61,10 @@ public abstract class User implements Serializable {
         return password;
     }
 
+    public void setPassword(String password) {
+         this.password=password;
+             }
+
     public ArrayList executeSearch(SearchManager search){
 
     return new ArrayList() ;
