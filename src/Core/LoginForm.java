@@ -24,6 +24,7 @@ public class LoginForm extends Form {
             Scene scene=new Scene(Login_Scene.Main_Menu);
             Login_Scene.primaryStage.setScene(scene);
             Login_Scene.primaryStage.show();
+            setLoggedInDonor(DatabaseManager.getInstance().queryDonor(username));
         }else {                     // name and pass is wrong
             attempts++;
             System.out.println(attempts);
@@ -58,5 +59,12 @@ public class LoginForm extends Form {
             return false;
         }
         return true;
+    }
+    private static Donor loggedin_doner;
+    public static void setLoggedInDonor(Donor donor){
+        loggedin_doner=donor;
+    }
+    public static Donor getLoggedin_doner(){
+        return loggedin_doner;
     }
 }
