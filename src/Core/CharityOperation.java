@@ -1,5 +1,5 @@
 package Core;
 
 public interface CharityOperation {
-    public void excute();
+    public void excute(Charity charity);
 }
