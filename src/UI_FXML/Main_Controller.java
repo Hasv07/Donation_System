@@ -29,8 +29,8 @@ public class Main_Controller {
     Animation timer;
     Login_Scene ui;
     static boolean flag;
-    //Animation Donation_History;
-    //static boolean flag2=false;
+    Animation Donation_History;
+    static boolean flag2=false;
 
 
 
@@ -86,7 +86,7 @@ public class Main_Controller {
     JFXTextField amountMoney;
     @FXML
     JFXTextField amountClothes;
-/*    Main_Controller()
+    Main_Controller()
     {
         this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
           if (flag==true)
@@ -98,7 +98,7 @@ public class Main_Controller {
         Donation_History.setCycleCount(-1);
 
         Donation_History.play();
-    }*/
+    }
 
 
     public void inistiate(){
@@ -114,7 +114,7 @@ public class Main_Controller {
             MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
         }
         combo1.setItems(MoneyCharity);
-
+        combo2.setItems(MoneyCharity);
     }
 
     public void Money_Donation_pressed()
@@ -252,6 +252,7 @@ public class Main_Controller {
             MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
         }
         combo1.setItems(MoneyCharity);
+        combo2.setItems(MoneyCharity);
     }
     
 }
