@@ -21,7 +21,7 @@ public class DatabaseManager {
     public static DatabaseManager getInstance() {
         if(instance == null){
             instance=new DatabaseManager();
-            instance.save();
+            
         }
         instance.read();
         return instance;
