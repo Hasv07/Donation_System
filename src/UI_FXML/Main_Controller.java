@@ -131,7 +131,7 @@ public class Main_Controller {
             Image image = new Image(selectedFile.toURI().toString());
             Profile_picture.setImage(image);
         }catch ( Exception e){
-            System.out.println("your profile picture is empty");
+            System.out.println("you don't change your profile picture");
         }
     }
     public void Clothes_Donation_pressed()
