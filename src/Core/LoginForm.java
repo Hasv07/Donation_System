@@ -24,6 +24,7 @@ public class LoginForm extends Form {
             Scene scene=new Scene(Login_Scene.Main_Menu);
             Login_Scene.primaryStage.setScene(scene);
             Login_Scene.primaryStage.show();
+            setLoggedInDonor(DatabaseManager.getInstance().queryDonor(username));
         }else {                     // name and pass is wrong
             attempts++;
             System.out.println(attempts);
@@ -42,19 +43,13 @@ public class LoginForm extends Form {
     }
 
     boolean checkCredentials(){
-        for (int i = 0; i <DatabaseManager.getInstance().queryDonors().size() ; i++) {
-            //System.out.println(DatabaseManager.getUser().get(i).getPassword());
-            //System.out.println("-------------");
-            //System.out.println(DatabaseManager.getUser().get(i).getUsername());
-            //System.out.println(getUserName());
-            //System.out.println(getPassword());
-            //System.out.println("Checking");
-            if (DatabaseManager.getInstance().queryDonors().get(i).getUsername().equals(getUserName()) &&
-                    DatabaseManager.getInstance().queryDonors().get(i).getPassword().equals(getPassword())){          //if name and pass equal on of users list
+
+            if (DatabaseManager.getInstance().queryDonor(getUserName()).getUsername().equals(getUserName()) &&
+                    DatabaseManager.getInstance().queryDonor(getUserName()).getPassword().equals(getPassword())){          //if name and pass equal on of users list
                 System.out.println("Checked");
                 return true;
             }
-        }
+
         //if name and pass wrong
         return false;
     }
@@ -64,5 +59,12 @@ public class LoginForm extends Form {
             return false;
         }
         return true;
+    }
+    private static Donor loggedin_doner;
+    public static void setLoggedInDonor(Donor donor){
+        loggedin_doner=donor;
+    }
+    public static Donor getLoggedin_doner(){
+        return loggedin_doner;
     }
 }

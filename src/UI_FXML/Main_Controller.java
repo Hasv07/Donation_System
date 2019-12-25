@@ -3,6 +3,7 @@ package UI_FXML;
 import Core.AddCharityOperation;
 import Core.Charity;
 import Core.DatabaseManager;
+import Core.LoginForm;
 import UI.Login_Scene;
 import com.jfoenix.controls.*;
 import javafx.collections.FXCollections;
@@ -11,6 +12,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 
 public class Main_Controller {
+
+
+
     @FXML
     private JFXButton Money_Donation;
     @FXML
@@ -54,11 +58,11 @@ public class Main_Controller {
 
 
     public void inistiate(){
-        address.setText(DatabaseManager.getInstance().queryDonors().get(0).getAddress());
-        phone.setText(DatabaseManager.getInstance().queryDonors().get(0).getPhoneNumber());
-        email.setText(DatabaseManager.getInstance().queryDonors().get(0).getEmail());
-        pas.setText(DatabaseManager.getInstance().queryDonors().get(0).getPassword());
-        userN.setText(DatabaseManager.getInstance().queryDonors().get(0).getUsername());
+        address.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getAddress());
+        phone.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPhoneNumber());
+        email.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getEmail());
+        pas.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getPassword());
+        userN.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getUsername());
         Category.setItems(Categoryopt);
     }
     public void Money_Donation_pressed()
