@@ -83,19 +83,19 @@ public class Main_Controller {
     JFXTextField amountMoney;
     @FXML
     JFXTextField amountClothes;
-    Main_Controller()
-    {
-        this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-          if (flag==true)
-          {
-              
-          }
-
-        }));
-        Donation_History.setCycleCount(-1);
-
-        Donation_History.play();
-    }
+   // Main_Controller()
+   // {
+   //     this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
+    //      if (flag==true)
+    //      {
+    //
+    //      }
+//
+  //      }));
+    //    Donation_History.setCycleCount(-1);
+//
+  //      Donation_History.play();
+   // }
 
 
     public void inistiate(){
@@ -118,7 +118,7 @@ public class Main_Controller {
     {
         flag=false;
         ui.flag=true;
-        MoneyDonation moneyDonation = new MoneyDonation(1,Integer.parseInt((amountMoney).getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().toString()).getId());
+        MoneyDonation moneyDonation = new MoneyDonation(1,Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getId());
         moneyDonation.addDonation();
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
             if(flag==false)
