@@ -163,7 +163,7 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <JFXComboBox layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
+                  <JFXComboBox fx:id="combo2" layoutX="451.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
                   <JFXButton layoutX="501.0" layoutY="469.0" prefHeight="31.0" prefWidth="116.0" text="Donate" textFill="#522626">
                      <font>
                         <Font size="24.0" />
@@ -183,7 +183,7 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <JFXComboBox layoutX="70.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
+                  <JFXComboBox fx:id="combo1" layoutX="70.0" layoutY="267.0" prefHeight="31.0" prefWidth="216.0" />
                   <Label layoutX="70.0" layoutY="231.0" prefHeight="36.0" prefWidth="111.0" text="Select Charity:">
                      <font>
                         <Font size="17.0" />
@@ -205,8 +205,8 @@
                      </font>
                   </Label>
                   <JFXDatePicker layoutX="447.0" layoutY="350.0" prefHeight="31.0" prefWidth="230.0" />
-                  <JFXTextField layoutX="533.0" layoutY="414.0" prefHeight="31.0" prefWidth="144.0" />
-                  <JFXTextField layoutX="159.0" layoutY="335.0" prefHeight="31.0" prefWidth="129.0" />
+                  <JFXTextField fx:id="amountClothes" layoutX="533.0" layoutY="414.0" prefHeight="31.0" prefWidth="144.0"  />
+                  <JFXTextField fx:id="amountMoney" layoutX="159.0" layoutY="335.0" prefHeight="31.0" prefWidth="129.0" />
                   <Label layoutX="79.0" layoutY="335.0" prefHeight="31.0" prefWidth="72.0" text="Amount:">
                      <font>
                         <Font size="19.0" />
