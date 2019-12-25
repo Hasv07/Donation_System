@@ -12,8 +12,8 @@ public class Donor extends User {
 
     }
 
-    public void addDonor(){
-
+    public void addDonor(Donor donor){
+        DatabaseManager.getInstance().insertDonor(donor);
     }
     public void removeDonor(){
 

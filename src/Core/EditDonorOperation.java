@@ -5,7 +5,7 @@ public class EditDonorOperation implements DonorOperation {
 
 
     @Override
-    public void execute() {
+    public void execute(Donor donor) {
 
     }
 }
