@@ -14,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -48,16 +50,70 @@ public class Login_Controller {
     JFXPasswordField pass;
     @FXML
     JFXTextField LastName;
+    @FXML
+    Label Warning;
+    @FXML
+    ImageView w1;
+    @FXML
+    ImageView w2;
+    @FXML
+    ImageView w3;
+    @FXML
+    ImageView w4;
+    @FXML
+    ImageView w5;
+    @FXML
+    ImageView w6;
+    public void disable_image()
+    {
+        w1.setVisible(false);
+        w2.setVisible(false);
+        w3.setVisible(false);
+        w4.setVisible(false);
+        w5.setVisible(false);
+        w6.setVisible(false);
+
+
+    }
 
 
     public void RegisterButton_pressesed() {
      //   s.getSelectionModel().select(tab1);
+        disable_image();
 
         if(FirstName.getText().isEmpty()||UserName.getText().isEmpty()||
                 email.getText().isEmpty()||address.getText().isEmpty()||phoneNumber.getText().isEmpty()||
                 pass.getText().isEmpty()||LastName.getText().isEmpty()){
 
-        }else {
+            Warning.setVisible(true);
+            if(FirstName.getText().isEmpty()||LastName.getText().isEmpty())
+            {
+                   w1.setVisible(true);
+                      }
+
+            if( UserName.getText().isEmpty())
+            {
+                w2.setVisible(true);
+            }
+            if( email.getText().isEmpty())
+            {
+                w3.setVisible(true);
+            }
+            if(passWord.getText().isEmpty())
+                w4.setVisible(true);
+            }
+            if(address.getText().isEmpty())
+            {
+                w5.setVisible(true);
+            }
+        if(phoneNumber.getText().isEmpty())
+        {
+            w6.setVisible(true);
+        }
+
+
+
+        else {
             Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
             //DatabaseManager.getInstance().insertDonor(donor);
             AddDonorOperation addDonorOperation = new AddDonorOperation(donor);
