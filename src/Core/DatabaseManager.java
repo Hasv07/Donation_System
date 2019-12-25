@@ -145,6 +145,10 @@ public class DatabaseManager {
         return donations;
     }
 
+    public ArrayList<Donation> queryDonations(){
+        return donations;
+    }
+
 
 
 

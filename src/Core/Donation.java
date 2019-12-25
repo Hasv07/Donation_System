@@ -11,6 +11,8 @@ public abstract class Donation implements Serializable {
     private String charityCategory;
     private static int count=1;
     public Donation( Double amount, int donorId, String charityName, String charityCategory) {
+        Donation donation=DatabaseManager.getInstance().queryDonations().get(DatabaseManager.getInstance().queryDonations().size()-1);
+        count=donation.getId();
         this.id=count;
         count++;
         this.amount = amount;

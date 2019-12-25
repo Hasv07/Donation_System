@@ -72,6 +72,8 @@ public abstract class User implements Serializable {
 
 
     public User( String username, String password, String name, String email, String address, String phoneNumber) {
+        User user =DatabaseManager.getInstance().queryDonors().get(DatabaseManager.getInstance().queryDonors().size()-1);
+        counter=user.getId();
         this.id = counter;
         counter++;
         this.username = username;
