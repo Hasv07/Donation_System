@@ -33,23 +33,23 @@ public class DatabaseManager {
             FileOutputStream fos = new FileOutputStream("donors.tmp");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(donors);
-            oos.close();
             fos.close();
+            oos.close();
 
             fos= new FileOutputStream("charities.tmp");
             oos = new ObjectOutputStream(fos);
             oos.writeObject(charities);
-            oos.close();
             fos.close();
+            oos.close();
 
             fos= new FileOutputStream("donations.tmp");
             oos = new ObjectOutputStream(fos);
             oos.writeObject(donations);
-            oos.close();
             fos.close();
+            oos.close();
 
         }catch (Exception e){
-            System.out.println("failed to save");
+            System.out.println(e.getStackTrace());
         }
 
 
@@ -58,25 +58,25 @@ public class DatabaseManager {
         try{
             FileInputStream fis = new FileInputStream("donors.tmp");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            donors = (ArrayList<Donor>) ois.readObject();
-            ois.close();
+            donors = (ArrayList<Donor>)ois.readObject();
             fis.close();
+            ois.close();
 
 
             fis = new FileInputStream("charities.tmp");
             ois = new ObjectInputStream(fis);
             charities = (ArrayList<Charity>) ois.readObject();
-            ois.close();
             fis.close();
+            ois.close();
 
 
             fis = new FileInputStream("donations.tmp");
             ois = new ObjectInputStream(fis);
             donations = (ArrayList<Donation>) ois.readObject();
-            ois.close();
             fis.close();
+            ois.close();
         }catch (Exception e){
-            System.out.println("failed to read");
+            System.out.println(e.getStackTrace());
         }
 
     }
