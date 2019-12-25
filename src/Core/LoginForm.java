@@ -40,14 +40,17 @@ public class LoginForm extends Form {
                 }
             }
         }
-    }
+            }
 
     boolean checkCredentials(){
 
-            if (DatabaseManager.getInstance().queryDonor(getUserName()).getUsername().equals(getUserName()) &&
-                    DatabaseManager.getInstance().queryDonor(getUserName()).getPassword().equals(getPassword())){          //if name and pass equal on of users list
-                System.out.println("Checked");
-                return true;
+            if (DatabaseManager.getInstance().queryDonor(getUserName()) != null){//if name and pass equal on of users list
+                User user=DatabaseManager.getInstance().queryDonor(getUserName());
+                if(user.getUsername().equals(getUserName()) && user.getPassword().equals(getPassword())){
+                    System.out.println("Checked");
+                    return true;
+                }
+
             }
 
         //if name and pass wrong
