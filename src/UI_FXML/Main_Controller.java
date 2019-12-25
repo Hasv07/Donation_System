@@ -111,12 +111,17 @@ public class Main_Controller {
         userN.setText(DatabaseManager.getInstance().queryDonor(LoginForm.getLoggedin_doner().getUsername()).getUsername());
         Category.setItems(Categoryopt);
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
+        ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
 
         for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
+            if(DatabaseManager.getInstance().queryCharities().get(i).getCategory().equals("Money Donations"))
             MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+            else
+                ClothesCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+
         }
         combo1.setItems(MoneyCharity);
-        combo2.setItems(MoneyCharity);
+        combo2.setItems(ClothesCharity);
     }
 
     public void Money_Donation_pressed()
@@ -249,12 +254,18 @@ public class Main_Controller {
         addCharityOperation.excute(charity);
         System.out.println(charity.getCategory());
         ObservableList<String> MoneyCharity = FXCollections.observableArrayList();
+        ObservableList<String> ClothesCharity = FXCollections.observableArrayList();
 
         for (int i = 0 ; i<DatabaseManager.getInstance().queryCharities().size();i++){
-            MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+            if(DatabaseManager.getInstance().queryCharities().get(i).getCategory().equals("Money Donations"))
+                MoneyCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+            else
+                ClothesCharity.add(DatabaseManager.getInstance().queryCharities().get(i).getName());
+
         }
         combo1.setItems(MoneyCharity);
-        combo2.setItems(MoneyCharity);
+        combo2.setItems(ClothesCharity);
     }
-    
+
+
 }
