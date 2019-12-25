@@ -1,16 +1,18 @@
 package Core;
 
 import UI.Login_Scene;
+import com.jfoenix.controls.JFXButton;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
 
 import java.util.ArrayList;
 
 
 public class LoginForm extends Form {
-    private static int attempts;
+    public static int attempts;
     private boolean validation;
     private boolean attemptsValidation;
-    private ArrayList<User> myUsers = DatabaseManager.getUser();// should have list of users from database
+    //private ArrayList<User> myUsers = DatabaseManager.getUser();// should have list of users from database
 
     public LoginForm(String username,String password) {
         setUserName(username);
@@ -32,15 +34,24 @@ public class LoginForm extends Form {
                 // can not try login again
                 if (attempts==3){
                     System.out.println("you can not login again close NOW");
+
+
                 }
             }
         }
     }
 
     boolean checkCredentials(){
-        for (int i = 0; i <myUsers.size() ; i++) {
-            if (myUsers.get(i).getUsername()==getUserName() &&
-                    myUsers.get(i).getPassword()==getPassword()){  //if name and pass equal on of users list
+        for (int i = 0; i <DatabaseManager.getUser().size() ; i++) {
+            System.out.println(DatabaseManager.getUser().get(i).getUsername());
+            System.out.println(DatabaseManager.getUser().get(i).getPassword());
+            System.out.println("-------------");
+            System.out.println(getUserName());
+            System.out.println(getPassword());
+            System.out.println("Checking");
+            if (DatabaseManager.getUser().get(i).getUsername().equals(getUserName()) &&
+                    DatabaseManager.getUser().get(i).getPassword().equals(getPassword())){          //if name and pass equal on of users list
+                System.out.println("Checked");
                 return true;
             }
         }

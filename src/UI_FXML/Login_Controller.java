@@ -1,6 +1,5 @@
 package UI_FXML;
-import Core.Form;
-import Core.LoginForm;
+import Core.*;
 import UI.Login_Scene;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
@@ -31,16 +30,30 @@ public class Login_Controller {
     private Label registered;
     @FXML
     private JFXButton Login;
-
     @FXML
     JFXTextField userName;
-
     @FXML
     JFXPasswordField passWord;
+    @FXML
+    JFXTextField UserName;
+    @FXML
+    JFXTextField FirstName;
+    @FXML
+    JFXTextField email;
+    @FXML
+    JFXTextField address;
+    @FXML
+    JFXTextField phoneNumber;
+    @FXML
+    JFXPasswordField pass;
+    @FXML
+    JFXTextField LastName;
 
 
     public void RegisterButton_pressesed() {
         s.getSelectionModel().select(tab1);
+        Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
+        DatabaseManager.user.add(donor);
         registered.setText("You have been registered successfully");
         registered.setOpacity(1);
         this.Text_disappearence = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
@@ -60,7 +73,13 @@ public class Login_Controller {
 
     }
     public void LoginButton_pressed(){
+        if(LoginForm.attempts>=2){
+            Login.setDisable(true);
 
+        }
+        //System.out.println(DatabaseManager.getUser().get(0).getName());
+        //System.out.println(DatabaseManager.getUser().get(0).getUsername());
+        //System.out.println(DatabaseManager.getUser().get(0).getPassword());
         LoginForm user=new LoginForm(userName.getText(),passWord.getText());
 
     }
