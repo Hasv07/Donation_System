@@ -227,7 +227,7 @@ int  i=0;
     }
     public void Clothes_Donation_pressed()
     {
-        ClothesDonation clothesDonation = new ClothesDonation(Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getName(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getCategory());
+        ClothesDonation clothesDonation = new ClothesDonation(Double.parseDouble(amountClothes.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo2.getSelectionModel().selectedItemProperty().getValue().toString()).getName(),DatabaseManager.getInstance().queryCharity(combo2.getSelectionModel().selectedItemProperty().getValue().toString()).getCategory());
         clothesDonation.addDonation();
         flag=false;
         ui.flag=true;
