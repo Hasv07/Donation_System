@@ -1,33 +1,36 @@
 package Core;
 
 import java.io.Serializable;
+import java.util.Locale;
 
 public abstract class Donation implements Serializable {
     private Integer id;
     private Double amount;
     private int donorId;
-    private int charityId;
+    private String charityName;
+    private String charityCategory;
 
-    public Donation(int id, double amount, int donorId, int charityId) {
+    public Donation(Integer id, Double amount, int donorId, String charityName, String charityCategory) {
         this.id = id;
         this.amount = amount;
         this.donorId = donorId;
-        this.charityId = charityId;
+        this.charityName = charityName;
+        this.charityCategory = charityCategory;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
@@ -39,22 +42,25 @@ public abstract class Donation implements Serializable {
         this.donorId = donorId;
     }
 
-    public int getCharityId() {
-        return charityId;
+    public String getCharityName() {
+        return charityName;
     }
 
-    public void setCharityId(int charityId) {
-        this.charityId = charityId;
+    public void setCharityName(String charityName) {
+        this.charityName = charityName;
     }
 
-    public void addDonation(){
+    public String getCharityCategory() {
+        return charityCategory;
     }
 
-    public void editDonation(){
-
+    public void setCharityCategory(String charityCategory) {
+        this.charityCategory = charityCategory;
     }
-    public void removeDonation(){
 
-    }
+    public abstract void addDonation();
+
+    public abstract void editDonation();
+    public abstract void removeDonation();
 
 }
