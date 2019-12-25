@@ -158,11 +158,10 @@
          <content>
             <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn fx:id="id" prefWidth="96.0" text="ID" />
-                <TableColumn fx:id="Donation_Type" prefWidth="207.0" text="Donation Type" />
-                  <TableColumn fx:id="Charity" prefWidth="189.0" text="Charity" />
-                  <TableColumn fx:id="Amount" minWidth="0.0" prefWidth="163.0" text="Amount" />
-                  <TableColumn prefWidth="172.0" text="Donor ID" />
+                <TableColumn fx:id="id" prefWidth="111.0" text="ID" />
+                <TableColumn fx:id="Donation_Type" prefWidth="239.0" text="Donation Type" />
+                  <TableColumn fx:id="Charity" prefWidth="215.0" text="Charity" />
+                  <TableColumn fx:id="Amount" minWidth="0.0" prefWidth="265.0" text="Amount" />
               </columns>
             </TableView>
          </content>

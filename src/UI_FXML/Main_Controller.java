@@ -150,7 +150,7 @@ static Integer i=1;
         flag=false;
         ui.flag=true;
 
-        MoneyDonation moneyDonation = new MoneyDonation(1,Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getId());
+        MoneyDonation moneyDonation = new MoneyDonation(Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getName(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getCategory());
         moneyDonation.addDonation();
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
@@ -177,7 +177,7 @@ static Integer i=1;
         timer.play();
         //animation();
         ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
-        ObservableList<Donation> Donations = FXCollections.observableArrayList(new MoneyDonation(0,0,0,0));
+        ObservableList<Donation> Donations = FXCollections.observableArrayList();
         Donations.addAll(donations);
         System.out.println(donations.get(0).getId());
         id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
@@ -225,7 +225,7 @@ static Integer i=1;
 
         timer.play();
         ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
-        ObservableList<Donation> Donations = FXCollections.observableArrayList(new MoneyDonation(0,0,0,0));
+        ObservableList<Donation> Donations = FXCollections.observableArrayList();
         Donations.addAll(donations);
         System.out.println(donations.get(0).getId());
         id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));

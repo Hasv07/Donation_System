@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class DatabaseManager {
 
-   private ArrayList<Donor>donors=new ArrayList<Donor>();
-   private ArrayList<Charity>charities=new ArrayList<Charity>();
-   private ArrayList<Donation> donations=new ArrayList<Donation>();
+    private ArrayList<Donor>donors=new ArrayList<Donor>();
+    private ArrayList<Charity>charities=new ArrayList<Charity>();
+    private ArrayList<Donation> donations=new ArrayList<Donation>();
 
 
     private static DatabaseManager instance =null;
@@ -21,7 +21,7 @@ public class DatabaseManager {
     public static DatabaseManager getInstance() {
         if(instance == null){
             instance=new DatabaseManager();
-
+            
         }
         instance.read();
         return instance;
@@ -94,8 +94,8 @@ public class DatabaseManager {
     }
 
     public void insertDonor(Donor donor) {
-       donors.add(donor);
-       this.save();
+        donors.add(donor);
+        this.save();
     }
 
     public void insertCharity(Charity charity) {

@@ -4,14 +4,15 @@ import java.io.Serializable;
 import java.util.Locale;
 
 public abstract class Donation implements Serializable {
-    private Integer id;
+    private  Integer id;
     private Double amount;
     private int donorId;
     private String charityName;
     private String charityCategory;
-
-    public Donation(Integer id, Double amount, int donorId, String charityName, String charityCategory) {
-        this.id = id;
+    private static int count=1;
+    public Donation( Double amount, int donorId, String charityName, String charityCategory) {
+        this.id=count;
+        count++;
         this.amount = amount;
         this.donorId = donorId;
         this.charityName = charityName;

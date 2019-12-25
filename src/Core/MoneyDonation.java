@@ -1,8 +1,8 @@
 package Core;
 
 public class MoneyDonation extends Donation {
-    public MoneyDonation(Integer id, Double amount, int donorId, String charityName, String charityCategory) {
-        super(id, amount, donorId, charityName, charityCategory);
+    public MoneyDonation( Double amount, int donorId, String charityName, String charityCategory) {
+        super( amount, donorId, charityName, charityCategory);
     }
 
     @Override
