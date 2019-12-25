@@ -29,11 +29,11 @@ public class Main_Controller {
 
 
     public void inistiate(){
-        address.setText(DatabaseManager.getUser().get(0).getAddress());
-        phone.setText(DatabaseManager.getUser().get(0).getPhoneNumber());
-        email.setText(DatabaseManager.getUser().get(0).getEmail());
-        pas.setText(DatabaseManager.getUser().get(0).getPassword());
-        userN.setText(DatabaseManager.getUser().get(0).getUsername());
+        address.setText(DatabaseManager.getInstance().queryDonors().get(0).getAddress());
+        phone.setText(DatabaseManager.getInstance().queryDonors().get(0).getPhoneNumber());
+        email.setText(DatabaseManager.getInstance().queryDonors().get(0).getEmail());
+        pas.setText(DatabaseManager.getInstance().queryDonors().get(0).getPassword());
+        userN.setText(DatabaseManager.getInstance().queryDonors().get(0).getUsername());
     }
     public void Money_Donation_pressed()
     {

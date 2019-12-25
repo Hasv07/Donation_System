@@ -57,15 +57,17 @@ public class Charity {
     }
 
     public void addCharity(){
-        AddCharityOperation add = new AddCharityOperation();
-        add.excute();
+       // AddCharityOperation add = new AddCharityOperation();
+       // add.excute();
+        //DatabaseManager.getInstance().insertCharity();
+
     }
     public void removeCharity(){
-        RemoveCharityOperation remove = new RemoveCharityOperation();
-        remove.excute();
+       //RemoveCharityOperation remove = new RemoveCharityOperation();
+        //remove.excute();
     }
     public void editCharity(){
-        EditCharityOperation edit = new EditCharityOperation();
-        edit.excute();
+        //EditCharityOperation edit = new EditCharityOperation();
+        //edit.excute();
     }
 }

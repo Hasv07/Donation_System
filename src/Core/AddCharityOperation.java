@@ -4,5 +4,7 @@ public class AddCharityOperation implements CharityOperation {
     private Charity charity;
 
     @Override
-    public void excute(){}
+    public void excute(){
+        charity.addCharity();
+    }
 }
