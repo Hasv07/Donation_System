@@ -61,6 +61,7 @@ public class Main_Controller {
     private JFXButton Browse;
     @FXML
     private JFXButton Submit;
+    @FXML
     JFXTextField chName;
     @FXML
     JFXTextField IL;

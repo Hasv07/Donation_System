@@ -52,34 +52,36 @@ public class Login_Controller {
 
     public void RegisterButton_pressesed() {
      //   s.getSelectionModel().select(tab1);
-        Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
-        //DatabaseManager.getInstance().insertDonor(donor);
-        AddDonorOperation addDonorOperation = new AddDonorOperation(donor);
-        addDonorOperation.execute(donor);
-       // s.getSelectionModel().select(tab1);
-        ui.flag=true;
-        //Scene scene =new Scene(Login_Scene.Login);
-        //Login_Scene.Login.getSelectionModel().select(0);
-        //Login_Scene.primaryStage.setScene(scene);
-        ui.Restart=true;
 
-        registered.setText("You have been registered successfully");
-        registered.setOpacity(1);
-        this.Text_disappearence = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-            registered.setOpacity(registered.getOpacity()-0.001);
-            if(registered.getOpacity()==0)
-            {
-                Text_disappearence.stop();
-            }
+        if(FirstName.getText().isEmpty()||UserName.getText().isEmpty()||
+                email.getText().isEmpty()||address.getText().isEmpty()||phoneNumber.getText().isEmpty()||
+                pass.getText().isEmpty()||LastName.getText().isEmpty()){
 
+        }else {
+            Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
+            //DatabaseManager.getInstance().insertDonor(donor);
+            AddDonorOperation addDonorOperation = new AddDonorOperation(donor);
+            addDonorOperation.execute(donor);
+            // s.getSelectionModel().select(tab1);
+            ui.flag=true;
+            //Scene scene =new Scene(Login_Scene.Login);
+            //Login_Scene.Login.getSelectionModel().select(0);
+            //Login_Scene.primaryStage.setScene(scene);
+            ui.Restart=true;
 
-        }));
-        Text_disappearence.setCycleCount(-1);
+            registered.setText("You have been registered successfully");
+            registered.setOpacity(1);
+            this.Text_disappearence = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
+                registered.setOpacity(registered.getOpacity()-0.001);
+                if(registered.getOpacity()==0)
+                {
+                    Text_disappearence.stop();
+                }
+            }));
+            Text_disappearence.setCycleCount(-1);
 
-        Text_disappearence.play();
-
-
-
+            Text_disappearence.play();
+        }
     }
     public void LoginButton_pressed(){
         if(LoginForm.attempts>=2){
