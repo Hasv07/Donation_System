@@ -21,8 +21,9 @@ public class DatabaseManager {
     public static DatabaseManager getInstance() {
         if(instance == null){
             instance=new DatabaseManager();
+            instance.save();
         }
-       // instance.read();
+        instance.read();
         return instance;
     }
 
@@ -95,11 +96,13 @@ public class DatabaseManager {
 
     public void insertDonor(Donor donor) {
        donors.add(donor);
+       this.save();
     }
 
 
     public void insertCharity(Charity charity) {
         charities.add(charity);
+        this.save();
     }
 
 
@@ -123,16 +126,19 @@ public class DatabaseManager {
     public void deleteDonor(String username){
         Donor donor=queryDonor(username);
         donors.remove(donor);
+        this.save();
     }
 
     public void deleteCharity(String name){
         Charity charity =queryCharity(name);
         charities.remove(charity);
+        this.save();
     }
 
 
     public void insertDonation(Donation donation){
         donations.add(donation);
+        this.save();
     }
 
     public ArrayList<Donation> queryDonorDonations(Donor donor){
