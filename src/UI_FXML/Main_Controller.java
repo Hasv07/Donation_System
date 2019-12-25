@@ -1,10 +1,12 @@
 package UI_FXML;
 
+import Core.AddCharityOperation;
+import Core.Charity;
 import Core.DatabaseManager;
 import UI.Login_Scene;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 
@@ -12,7 +14,7 @@ public class Main_Controller {
     @FXML
     private JFXButton Money_Donation;
     @FXML
-
+    ObservableList<String> Categoryopt = FXCollections.observableArrayList("Money Donations","Clothes Donations");
     private Tab Donate_tab;
 
     @FXML
@@ -25,7 +27,20 @@ public class Main_Controller {
     JFXTextField phone;
     @FXML
     JFXTextField address;
-
+    @FXML
+    JFXTextField chName;
+    @FXML
+    JFXTextField IL;
+    @FXML
+    JFXTextArea Desc;
+    @FXML
+    JFXTextField chEmail;
+    @FXML
+    JFXComboBox Category;
+    @FXML
+    JFXTextField chPhoneNumber;
+    @FXML
+    JFXTextField chWebsite;
 
 
     public void inistiate(){
@@ -34,9 +49,16 @@ public class Main_Controller {
         email.setText(DatabaseManager.getInstance().queryDonors().get(0).getEmail());
         pas.setText(DatabaseManager.getInstance().queryDonors().get(0).getPassword());
         userN.setText(DatabaseManager.getInstance().queryDonors().get(0).getUsername());
+        Category.setItems(Categoryopt);
     }
     public void Money_Donation_pressed()
     {
         Donate_tab.setContent(Login_Scene.payment);
+    }
+    public void Submit_Charity(){
+        Charity charity = new Charity(chName.getText(),Category.getSelectionModel().selectedItemProperty().getValue().toString(),Desc.getText(),chWebsite.getText(),chEmail.getText());
+        AddCharityOperation addCharityOperation = new AddCharityOperation(charity);
+        addCharityOperation.excute(charity);
+        System.out.println(charity.getCategory());
     }
 }

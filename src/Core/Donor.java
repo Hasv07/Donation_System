@@ -17,8 +17,8 @@ public class Donor extends User implements Serializable {
     public void addDonor(Donor donor){
         DatabaseManager.getInstance().insertDonor(donor);
     }
-    public void removeDonor(){
-
+    public void removeDonor(Donor donor){
+        DatabaseManager.getInstance().deleteDonor(donor.getUsername());
     }
     public void editDonor(){
 

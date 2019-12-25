@@ -1,12 +1,21 @@
 package Core;
 
 public class Charity {
-    private int id;
+    private static int id=1;
     private String name;
     private String category;
     private String description;
     private String link;
     private String email;
+
+    public Charity(String name, String category, String description, String link, String email) {
+        this.id++;
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.link = link;
+        this.email = email;
+    }
 
     public int getId() {
         return id;
@@ -56,10 +65,10 @@ public class Charity {
         this.email = email;
     }
 
-    public void addCharity(){
+    public void addCharity(Charity charity){
        // AddCharityOperation add = new AddCharityOperation();
        // add.excute();
-        //DatabaseManager.getInstance().insertCharity();
+        DatabaseManager.getInstance().insertCharity(charity);
 
     }
     public void removeCharity(){
