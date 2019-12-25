@@ -115,7 +115,7 @@ public class Login_Controller {
 
 
         else {
-            Donor donor = new Donor(1,UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
+            Donor donor = new Donor(UserName.getText(),pass.getText(),FirstName.getText()+ " " + LastName.getText(), email.getText(),address.getText(),phoneNumber.getText(),0);
             //DatabaseManager.getInstance().insertDonor(donor);
             AddDonorOperation addDonorOperation = new AddDonorOperation(donor);
             addDonorOperation.execute(donor);

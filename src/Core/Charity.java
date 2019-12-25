@@ -3,15 +3,16 @@ package Core;
 import java.io.Serializable;
 
 public class Charity implements Serializable {
-    private static int id=1;
+    private  int id;
     private String name;
     private String category;
     private String description;
     private String link;
     private String email;
-
+    private static int counter;
     public Charity(String name, String category, String description, String link, String email) {
-        this.id++;
+        this.id=counter;
+        counter++;
         this.name = name;
         this.category = category;
         this.description = description;
