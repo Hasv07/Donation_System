@@ -29,6 +29,9 @@ public class Main_Controller {
     Animation timer;
     Login_Scene ui;
     static boolean flag;
+    Animation Donation_History;
+    static boolean flag2=false;
+
 
 
 
@@ -83,6 +86,19 @@ public class Main_Controller {
     JFXTextField amountMoney;
     @FXML
     JFXTextField amountClothes;
+    Main_Controller()
+    {
+        this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
+          if (flag==true)
+          {
+              
+          }
+
+        }));
+        Donation_History.setCycleCount(-1);
+
+        Donation_History.play();
+    }
 
 
     public void inistiate(){
