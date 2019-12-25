@@ -18,7 +18,7 @@ import java.net.URL;
 
 public class Login_Controller {
     Animation Text_disappearence;
-    //Login_Scene UI;
+    Login_Scene ui;
     @FXML
     private Tab tab1;
     @FXML
@@ -29,7 +29,13 @@ public class Login_Controller {
     private JFXButton Login;
 
     public void RegisterButton_pressesed() {
-        s.getSelectionModel().select(tab1);
+       // s.getSelectionModel().select(tab1);
+        ui.flag=true;
+        //Scene scene =new Scene(Login_Scene.Login);
+        //Login_Scene.Login.getSelectionModel().select(0);
+        //Login_Scene.primaryStage.setScene(scene);
+        ui.Restart=true;
+
         registered.setText("You have been registered successfully");
         registered.setOpacity(1);
         this.Text_disappearence = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
@@ -53,5 +59,6 @@ public class Login_Controller {
 
         Login_Scene.primaryStage.setScene(scene);
         Login_Scene.primaryStage.show();
+
     }
 }

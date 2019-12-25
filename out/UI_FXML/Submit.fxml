@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI_FXML.Submit_Scene">
+   <children>
+      <JFXButton fx:id="Back" layoutX="681.0" layoutY="22.0" onMouseClicked="#Back_pressed" text="Back">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="63.0">
+               <image>
+                  <Image url="@Resourses/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="125.0" layoutY="249.0" prefHeight="51.0" prefWidth="564.0" text="Your Application has been submitted,Wait an E-Mail from us">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="534.0" fitWidth="831.0">
+         <image>
+            <Image url="@Resourses/b1.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="94.0" fitWidth="200.0" layoutX="67.0" layoutY="339.0">
+         <image>
+            <Image url="@Resourses/Infinity.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="94.0" fitWidth="200.0" layoutX="259.0" layoutY="155.0">
+         <image>
+            <Image url="@Resourses/Infinity.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="94.0" fitWidth="200.0" layoutX="481.0" layoutY="349.0">
+         <image>
+            <Image url="@Resourses/Infinity.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

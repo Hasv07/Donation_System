@@ -1,11 +1,14 @@
 package UI_FXML;
 
+import UI.Login_Scene;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
 public class Cash_Controller {
+    Login_Scene ui;
+    int counter=0;
     @FXML
     private ImageView party1;
     @FXML
@@ -35,6 +38,10 @@ public class Cash_Controller {
         party2.setVisible(false);
         Fawry_Code.setVisible(false);
         Generator.setVisible(false);
+        if(counter==1) {
+            ui.flag = true;
+            counter--;
+        }
 
     }
 
@@ -49,6 +56,10 @@ public class Cash_Controller {
         Fawry_Code.setVisible(false);*/
         Generator.setVisible(true);
 
+        if(counter==1) {
+            ui.flag = true;
+            counter--;
+        }
 
     }
     public void Generator_Button_pressed()

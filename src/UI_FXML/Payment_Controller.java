@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class Payment_Controller {
     ObservableList<String> Payment_methods = FXCollections.observableArrayList("Cash","Credit Card");
+    Login_Scene ui;
 
     @FXML
     private ComboBox<String> Payment ;
@@ -65,6 +66,8 @@ public class Payment_Controller {
     }
     public void Back_pressed()
     {
+        ui.flag=true;
+
         Main_Controller.flag=true;
     }
 
