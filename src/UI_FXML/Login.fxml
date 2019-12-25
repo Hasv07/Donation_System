@@ -57,7 +57,7 @@
                                                 <Font size="24.0" />
                                              </font>
                                           </Label>
-                                          <JFXTextField layoutX="276.0" layoutY="28.0" prefHeight="31.0" prefWidth="295.0" />
+                                          <JFXTextField id="UserName" fx:id="userName" layoutX="276.0" layoutY="28.0" prefHeight="31.0" prefWidth="295.0" />
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -75,7 +75,7 @@
                                     <Font size="24.0" />
                                  </font>
                               </Label>
-                              <JFXPasswordField layoutX="275.0" layoutY="28.0" prefHeight="31.0" prefWidth="309.0" />
+                              <JFXPasswordField id="password" fx:id="passWord" layoutX="275.0" layoutY="28.0" prefHeight="31.0" prefWidth="309.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -96,32 +96,32 @@
          <content>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label layoutX="59.0" layoutY="110.0" text="First Name">
+                  <Label  layoutX="59.0" layoutY="110.0" text="First Name">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="378.0" layoutY="112.0" text="Last Name">
+                  <Label  layoutX="378.0" layoutY="112.0" text="Last Name">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="58.0" layoutY="164.0" text="User Name">
+                  <Label  layoutX="58.0" layoutY="164.0" text="User Name">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="60.0" layoutY="217.0" text="E-MAIL">
+                  <Label  layoutX="60.0" layoutY="217.0" text="E-MAIL">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="60.0" layoutY="275.0" text="Password">
+                  <Label  layoutX="60.0" layoutY="275.0" text="Password">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="58.0" layoutY="330.0" text="Address">
+                  <Label  layoutX="58.0" layoutY="330.0" text="Address">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -131,12 +131,12 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="190.0" layoutY="110.0" prefHeight="28.0" prefWidth="162.0" />
-                  <JFXTextField layoutX="192.0" layoutY="164.0" prefHeight="31.0" prefWidth="394.0" />
-                  <JFXTextField layoutX="193.0" layoutY="217.0" prefHeight="31.0" prefWidth="393.0" />
-                  <JFXTextField layoutX="191.0" layoutY="330.0" prefHeight="31.0" prefWidth="402.0" />
-                  <JFXTextField layoutX="199.0" layoutY="382.0" prefHeight="31.0" prefWidth="394.0" />
-                  <JFXPasswordField layoutX="191.0" layoutY="275.0" prefHeight="31.0" prefWidth="400.0" />
+                  <JFXTextField fx:id="FirstName" layoutX="190.0" layoutY="110.0" prefHeight="28.0" prefWidth="162.0"  />
+                  <JFXTextField fx:id="UserName" layoutX="192.0" layoutY="164.0" prefHeight="31.0" prefWidth="394.0"  />
+                  <JFXTextField fx:id="email" layoutX="193.0" layoutY="217.0" prefHeight="31.0" prefWidth="393.0"  />
+                  <JFXTextField fx:id="address" layoutX="191.0" layoutY="330.0" prefHeight="31.0" prefWidth="402.0"  />
+                  <JFXTextField fx:id="phoneNumber" layoutX="199.0" layoutY="382.0" prefHeight="31.0" prefWidth="394.0"  />
+                  <JFXPasswordField fx:id="pass" layoutX="191.0" layoutY="275.0" prefHeight="31.0" prefWidth="400.0"  />
                   <JFXButton layoutX="277.0" layoutY="449.0" onMouseClicked="#RegisterButton_pressesed" prefHeight="51.0" prefWidth="156.0" text="Register">
                      <font>
                         <Font size="24.0" />
@@ -147,7 +147,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="496.0" layoutY="113.0" prefHeight="28.0" prefWidth="162.0" />
+                  <JFXTextField fx:id="LastName" layoutX="496.0" layoutY="113.0" prefHeight="28.0" prefWidth="162.0"  />
                </children>
             </AnchorPane>
          </content></Tab>
