@@ -1,6 +1,8 @@
 package Core;
 
-public abstract class Donation {
+import java.io.Serializable;
+
+public abstract class Donation implements Serializable {
     private int id;
     private double amount;
     private int donorId;

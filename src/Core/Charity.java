@@ -1,6 +1,8 @@
 package Core;
 
-public class Charity {
+import java.io.Serializable;
+
+public class Charity implements Serializable {
     private static int id=1;
     private String name;
     private String category;
