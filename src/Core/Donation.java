@@ -3,8 +3,8 @@ package Core;
 import java.io.Serializable;
 
 public abstract class Donation implements Serializable {
-    private int id;
-    private double amount;
+    private Integer id;
+    private Double amount;
     private int donorId;
     private int charityId;
 

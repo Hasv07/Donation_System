@@ -14,6 +14,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -21,19 +24,19 @@ import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class Main_Controller {
     Animation timer;
     Login_Scene ui;
     static boolean flag;
-/*
+
     Animation Donation_History;
     static boolean flag2=false;
-*/
 
 
 
-
+static Integer i=1;
     @FXML
     private JFXButton Money_Donation;
     @FXML
@@ -85,21 +88,34 @@ public class Main_Controller {
     JFXTextField amountMoney;
     @FXML
     JFXTextField amountClothes;
+    @FXML
+    TableView table;
+    @FXML
+    TableColumn id;
+    @FXML
+    TableColumn Donation_Type;
+    @FXML
+    TableColumn Charity;
+    @FXML
+    TableColumn DonorID;
+
+    @FXML
+    TableColumn Amount;
 
 
-/*    Main_Controller()
+    public void animation()
     {
         this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-          if (flag==true)
-          {
+            if (flag==true)
+            {
 
-          }
+            }
 
         }));
         Donation_History.setCycleCount(-1);
 
         Donation_History.play();
-    }*/
+    }
 
 
 
@@ -159,6 +175,14 @@ public class Main_Controller {
         timer.setCycleCount(-1);
 
         timer.play();
+        //animation();
+        ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
+        ObservableList<Donation> Donations = FXCollections.observableArrayList(new MoneyDonation(0,0,0,0));
+        Donations.addAll(donations);
+        System.out.println(donations.get(0).getId());
+        id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
+        Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
+        table.setItems(Donations);
     }
     public void Browse()
     {
@@ -195,10 +219,22 @@ public class Main_Controller {
             }
 
 
+
         }));
         timer.setCycleCount(-1);
 
         timer.play();
+        ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
+        ObservableList<Donation> Donations = FXCollections.observableArrayList(new MoneyDonation(0,0,0,0));
+        Donations.addAll(donations);
+        System.out.println(donations.get(0).getId());
+        id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
+        Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
+       table.setItems(Donations);
+       // table.getItems().setAll(donations);
+
+
+
     }
     public void submit()
     {
@@ -228,6 +264,7 @@ public class Main_Controller {
         timer.setCycleCount(-1);
 
         timer.play();
+
     }
     public void Submit_Charity() {
         flag = false;
