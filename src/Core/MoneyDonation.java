@@ -6,7 +6,7 @@ public class MoneyDonation extends Donation {
     }
     @Override
     public void addDonation(){
-
+        DatabaseManager.getInstance().insertDonation(this);
     }
     @Override
     public void editDonation(){}
