@@ -187,6 +187,32 @@ public class Main_Controller {
         timer.play();
     }
     public void Submit_Charity(){
+        flag=false;
+        ui.flag=true;
+        System.out.println("Hello");
+
+        this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
+            if(flag==false)
+                Submit_tab.setContent(Login_Scene.Submit);
+            else {
+
+                //Donate_tab.setContent(Donate_Pane);
+
+                Scene scene =new Scene(Login_Scene.Main_Menu);
+                Login_Scene.Main_Menu.getSelectionModel().select(3);
+
+                Login_Scene.primaryStage.setScene(scene);
+
+
+
+                timer.stop();
+            }
+
+
+        }));
+        timer.setCycleCount(-1);
+
+        timer.play();
         Charity charity = new Charity(chName.getText(),Category.getSelectionModel().selectedItemProperty().getValue().toString(),Desc.getText(),chWebsite.getText(),chEmail.getText());
         AddCharityOperation addCharityOperation = new AddCharityOperation(charity);
         addCharityOperation.excute(charity);
