@@ -4,24 +4,46 @@ import java.util.ArrayList;
 
 public class DatabaseManager {
 
-   public static ArrayList<User>user=new ArrayList<User>();
-   public ArrayList<Charity>charity=new ArrayList<Charity>();
+   private ArrayList<Donor>donors=new ArrayList<Donor>();
+   private ArrayList<Charity>charities=new ArrayList<Charity>();
 
-   
-    public static ArrayList<User> getUser() {
-        return user;
+    private static DatabaseManager instance =null;
+
+    private DatabaseManager() {
+
     }
 
-    public void setUser(ArrayList<User> user) {
-        this.user = user;
+    public static DatabaseManager getInstance() {
+        if(instance == null){
+            instance=new DatabaseManager();
+        }
+
+        return instance;
     }
 
-    public ArrayList<Charity> getCharity() {
-        return charity;
+
+    public  ArrayList<Donor> queryDonors( ) {
+
+        return donors;
     }
 
-    public void setCharity(ArrayList<Charity> charity) {
-        this.charity = charity;
+    public  ArrayList<Charity> queryCharities( ) {
+
+        return charities;
     }
+
+
+    public void insertUser(Donor donor) {
+       donors.add(donor);
+    }
+
+
+    public void insertCharity(Charity charity) {
+        charities.add(charity);
+    }
+
+
+    
+
 
 }
