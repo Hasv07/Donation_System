@@ -12,6 +12,7 @@ public abstract class User {
     private String address;
     private String phoneNumber;
 
+<<<<<<< HEAD
     public static int getId() {
         return id;
     }
@@ -59,6 +60,8 @@ public abstract class User {
     public String getPassword() {
         return password;
     }
+=======
+>>>>>>> parent of d8cdef4... added a database
 
     public ArrayList executeSearch(SearchManager search){
 
@@ -68,7 +71,10 @@ public abstract class User {
 
     public User(int id, String username, String password, String name, String email, String address, String phoneNumber) {
         this.id = id;
+<<<<<<< HEAD
         this.id++;
+=======
+>>>>>>> parent of d8cdef4... added a database
         this.username = username;
         this.password = password;
         this.name = name;
