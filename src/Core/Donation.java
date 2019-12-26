@@ -11,10 +11,10 @@ public abstract class Donation implements Serializable {
     private String charityCategory;
     private static int count;
     public Donation( Double amount, int donorId, String charityName, String charityCategory) {
-       if(count!=0){
-           Donation donation=DatabaseManager.getInstance().queryDonations().get(DatabaseManager.getInstance().queryDonations().size()-1);
-           count=donation.getId();
-       }
+
+        Donation donation=DatabaseManager.getInstance().queryDonations().get(DatabaseManager.getInstance().queryDonations().size()-1);
+        count=donation.getId();
+
         count++;
         this.id=count;
 
