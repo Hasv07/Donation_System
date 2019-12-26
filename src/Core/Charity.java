@@ -11,10 +11,10 @@ public class Charity implements Serializable {
     private String email;
     private static int counter;
     public Charity(String name, String category, String description, String link, String email) {
-       if (counter!=0){
-           Charity charity=DatabaseManager.getInstance().queryCharities().get(DatabaseManager.getInstance().queryCharities().size()-1);
-           counter=charity.getId();
-       }
+
+        Charity charity=DatabaseManager.getInstance().queryCharities().get(DatabaseManager.getInstance().queryCharities().size()-1);
+        counter=charity.getId();
+
         counter++;
         this.id=counter;
 
