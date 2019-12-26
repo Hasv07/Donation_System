@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f357ed5-2a23-4bc9-9b60-44501bea6dce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charities.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/charities.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/donations.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/donations.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donors.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/donors.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/UI_FXML/Main_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/UI_FXML/Main_Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/ClothesDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ClothesDonation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/UI/Login_Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/UI/Login_Scene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI_FXML/Cash_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI_FXML/Cash_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI_FXML/Main_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI_FXML/Main_Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +18,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="230" column="34" selection-start-line="230" selection-start-column="34" selection-end-line="230" selection-end-column="34" />
+            <state relative-caret-position="196">
+              <caret line="218" column="18" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Clothes_Donation.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Payment.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,68 +60,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/DatabaseManager.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1819">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="e#142#149#0" expanded="true" />
-                <element signature="e#206#215#0" expanded="true" />
-                <element signature="e#274#284#0" expanded="true" />
-                <element signature="e#3657#3658#0" expanded="true" />
-                <element signature="e#3689#3690#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="332">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/User.java">
+        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Cash_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/Donation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="73" column="21" selection-start-line="73" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#746#747#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#855#856#0" expanded="true" />
-                <element signature="e#886#887#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1035#1036#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1123#1124#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1249#1250#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1365#1366#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Login_Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="845">
-              <caret line="152" column="20" selection-start-line="152" selection-end-line="153" />
             </state>
           </provider>
         </entry>
@@ -132,15 +109,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -163,12 +131,13 @@
         <option value="$PROJECT_DIR$/src/Core/LoginForm.java" />
         <option value="$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml" />
         <option value="$PROJECT_DIR$/src/UI/Login_Scene.java" />
-        <option value="$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java" />
         <option value="$PROJECT_DIR$/src/UI_FXML/Login_Controller.java" />
         <option value="$PROJECT_DIR$/src/Core/User.java" />
         <option value="$PROJECT_DIR$/src/Core/Donation.java" />
         <option value="$PROJECT_DIR$/src/Core/ClothesDonation.java" />
         <option value="$PROJECT_DIR$/src/UI_FXML/Main_Controller.java" />
+        <option value="$PROJECT_DIR$/src/UI_FXML/Cash_Controller.java" />
+        <option value="$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java" />
       </list>
     </option>
   </component>
@@ -266,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Login_Scene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="MAIN_CLASS_NAME" value="UI.Login_Scene" />
@@ -290,8 +259,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.Main" />
+      <module name="Donation_System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Login_Scene" />
       </list>
     </recent_temporary>
@@ -442,16 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Cash_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/javafx/application/PlatformImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -511,20 +484,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Payment.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Login_Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1573">
-          <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+        <state relative-caret-position="202">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -563,17 +528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Donation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="24" />
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#623#624#0" expanded="true" />
@@ -621,22 +579,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Credit_Scene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/MoneyDonation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="18" selection-start-line="8" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="83" selection-start-line="107" selection-start-column="90" selection-end-line="315" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -647,13 +593,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/UI/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="230" column="34" selection-start-line="230" selection-start-column="34" selection-end-line="230" selection-end-column="34" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Payment.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Menu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="83" selection-start-line="107" selection-start-column="90" selection-end-line="315" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Main_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="218" column="18" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Clothes_Donation.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Cash_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="73" column="21" selection-start-line="73" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Credit_Scene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI_FXML/Credit_Scene_Conteoller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>

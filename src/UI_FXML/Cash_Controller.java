@@ -30,6 +30,7 @@ public class Cash_Controller {
 
     public void cash_Button_pressed()
     {
+
         party3.setVisible(true);
         party4.setVisible(true);
         thank.setVisible(true);
@@ -42,11 +43,14 @@ public class Cash_Controller {
             ui.flag = true;
             counter--;
         }
+        Main_Controller.flag2=true;
+
 
     }
 
     public void Fawry_Button_pressed()
     {
+
         party3.setVisible(false);
         party4.setVisible(false);
         thank.setVisible(false);
@@ -71,6 +75,7 @@ public class Cash_Controller {
         int x= (int)(Math.random()*9000000+10000000);
         Fawry_Code.setText("Your Fawry code is "+x);
         Fawry_Code.setVisible(true);
+        Main_Controller.flag2=true;
 
 
     }

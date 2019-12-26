@@ -30,6 +30,8 @@ public class Credit_Scene_Conteoller {
         verify.setVisible(true);
         party1.setVisible(true);
         party2.setVisible(true);
+        Main_Controller.flag2=true;
+
     }
 
 

@@ -108,10 +108,23 @@ int  i=0;
     public void animation()
     {
         this.Donation_History = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-            if (flag==true)
+            if (flag2==true)
             {
+                ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
+                ObservableList<Donation> Donations = FXCollections.observableArrayList();
+                Donations.addAll(donations);
+                // System.out.println(donations.get(0).getId());
+                id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
+                Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
+                Charity.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityName"));
+                Donation_Type.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityCategory"));
+
+                table.setItems(Donations);
+                Donation_History.stop();
+                flag2=false;
 
             }
+
 
         }));
         Donation_History.setCycleCount(-1);
@@ -202,16 +215,8 @@ int  i=0;
         timer.play();
         //animation();
 
-        ArrayList<Donation> donations=DatabaseManager.getInstance().queryDonorDonations(LoginForm.getLoggedin_doner());
-        ObservableList<Donation> Donations = FXCollections.observableArrayList();
-        Donations.addAll(donations);
-        System.out.println(donations.get(0).getId());
-        id.setCellValueFactory(new PropertyValueFactory<Donation,Integer>("id"));
-        Amount.setCellValueFactory(new PropertyValueFactory<Donation,Double>("amount"));
-        Charity.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityName"));
-        Donation_Type.setCellValueFactory(new PropertyValueFactory<Donation,String>("charityCategory"));
-
-        table.setItems(Donations);
+      flag2=false;
+      animation();
     }
     public void Browse()
     {
