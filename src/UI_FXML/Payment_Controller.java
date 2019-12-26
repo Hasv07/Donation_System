@@ -68,7 +68,7 @@ public class Payment_Controller {
     {
         ui.flag=true;
 
-        Main_Controller.flag=true;
+        Main_Controller.donate_flag=true;
     }
 
 

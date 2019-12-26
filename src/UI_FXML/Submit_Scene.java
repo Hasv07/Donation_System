@@ -12,7 +12,7 @@ public class Submit_Scene {
     {
         ui.flag=true;
 
-        Main_Controller.flag=true;
+        Main_Controller.static_flag=true;
     }
 
 }

@@ -31,7 +31,9 @@ import java.util.ArrayList;
 public class Main_Controller {
     Animation timer;
     Login_Scene ui;
-    static boolean flag;
+    static boolean donate_flag;
+
+    static boolean static_flag;
 
     Animation Donation_History;
     static boolean flag2=false;
@@ -185,14 +187,14 @@ int  i=0;
 
     public void Money_Donation_pressed()
     {
-        flag=false;
+        donate_flag=false;
         ui.flag=true;
 
         MoneyDonation moneyDonation = new MoneyDonation(Double.parseDouble(amountMoney.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getName(),DatabaseManager.getInstance().queryCharity(combo1.getSelectionModel().selectedItemProperty().getValue().toString()).getCategory());
         moneyDonation.addDonation();
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-            if(flag==false)
+            if(donate_flag==false)
             Donate_tab.setContent(Login_Scene.payment);
             else {
 
@@ -234,11 +236,11 @@ int  i=0;
     {
         ClothesDonation clothesDonation = new ClothesDonation(Double.parseDouble(amountClothes.getText()),LoginForm.getLoggedin_doner().getId(),DatabaseManager.getInstance().queryCharity(combo2.getSelectionModel().selectedItemProperty().getValue().toString()).getName(),DatabaseManager.getInstance().queryCharity(combo2.getSelectionModel().selectedItemProperty().getValue().toString()).getCategory());
         clothesDonation.addDonation();
-        flag=false;
+        donate_flag=false;
         ui.flag=true;
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-            if(flag==false)
+            if(donate_flag==false)
                 Donate_tab.setContent(Login_Scene.Clothes);
             else {
 
@@ -276,12 +278,12 @@ int  i=0;
     }
     public void submit()
     {
-        flag=false;
+        static_flag=false;
         ui.flag=true;
         System.out.println("Hello");
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
-            if(flag==false)
+            if(static_flag==false)
                 Submit_tab.setContent(Login_Scene.Submit);
             else {
 
@@ -305,14 +307,16 @@ int  i=0;
 
     }
     public void Submit_Charity() {
-        flag = false;
+        static_flag = false;
         ui.flag = true;
         System.out.println("Hello");
 
         this.timer = new Timeline(new KeyFrame(Duration.millis(5.0D), (e) -> {
 
-            if (flag == false)
+            if (static_flag == false) {
                 Submit_tab.setContent(Login_Scene.Submit);
+                Donate_tab.setDisable(true);
+            }
             else {
 
                 //Donate_tab.setContent(Donate_Pane);

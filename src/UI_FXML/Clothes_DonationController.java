@@ -12,6 +12,6 @@ public class Clothes_DonationController {
     {
         ui.flag=true;
 
-        Main_Controller.flag=true;
+        Main_Controller.static_flag=true;
     }
 }
