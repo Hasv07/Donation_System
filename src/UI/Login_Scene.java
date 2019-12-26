@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 
 public class Login_Scene extends Application {
+
+    //region initss
     public static Stage primaryStage ;
     public static TabPane Login;
     public static JFXTabPane Main_Menu;
@@ -29,15 +31,13 @@ public class Login_Scene extends Application {
     public static Boolean flag;
     private Animation timer;
     public static boolean Restart=false;
-
-
-
-
+    //endregion
 
     public static void main(String[] args) {
         launch(args);
     }
 
+    //region UI basics
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage=primaryStage;
@@ -209,8 +209,5 @@ public class Login_Scene extends Application {
         }
 
     }
-
-
-
-
+    //endregion
 }
